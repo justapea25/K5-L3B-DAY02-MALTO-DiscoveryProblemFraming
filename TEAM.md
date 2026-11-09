@@ -6,7 +6,7 @@
 
 - Tên nhóm: MALTO
 - Candidate problem nhóm chọn (1 câu): Hệ thống phát hiện sự cố thú cưng trong khu chung cư
-- Quyết định cuối (Go / Not Yet / No-Go): Go
+- Quyết định cuối (Go / Not Yet / No-Go): Not Yet cho triển khai thương mại; Go cho pilot nhỏ
 
 ## Thành viên
 
@@ -37,16 +37,6 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
-### HoVaTen-MSSV
-
-**Phần việc phụ trách:**
-
-**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
-
-**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
-
-**Điều mình học được từ phần nhóm:**
-
 ### Đậu Hoàng Minh - 2A202604011
 
 **Phần việc phụ trách:**
@@ -67,8 +57,8 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Bằng chứng**
 
 - Mục 6 và Mục 9 trong file `group_report.md`
-- File cp5-workflow-future.png trong `report/assets/`
-- Commit thêm mục 6, mục 9 vào file group report
+- File `cp5-workflow-current.png` trong `report/assets/` (quy trình hiện tại, chụp từ slide pitch)
+- Commit 77c2f95712f4ea86e5b8e01c0403c0f3204b438e thêm mục 6, mục 9 vào file group report
 
 **Điều mình học được từ phần nhóm:**
 

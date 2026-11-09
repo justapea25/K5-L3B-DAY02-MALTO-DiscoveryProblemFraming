@@ -8,7 +8,7 @@
 - Tên nhóm: MALTO
 - Thành viên: xem `TEAM.md`
 - Candidate problem được chọn (1 câu): Hệ thống phát hiện sự cố thú cưng trong khu chung cư
-- Quyết định cuối: Go
+- Quyết định cuối: Not Yet cho triển khai thương mại; Go cho pilot nhỏ
 
 ---
 
@@ -114,17 +114,23 @@ Tổng hợp:
 
 ### 3.3. Research giải pháp đã có
 
+*Research do Đặng Minh Thu thực hiện; chi tiết trong [báo cáo cá nhân của Thu](../individual/2A202604009_DangMinhThu.md).*
+
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| Frigate NVR | [docs.frigate.video](https://docs.frigate.video/) · [Review, Alerts and Detections](https://docs.frigate.video/configuration/review/) | Bước 3: tìm đoạn video đáng chú ý | Phát hiện và theo dõi đối tượng trong video camera, phân loại cảnh báo, hỗ trợ xem lại các đoạn đáng chú ý | Phát hiện chó, mèo hoặc người chưa đồng nghĩa với nhận diện hành vi phóng uế hay xác định căn hộ liên quan | Phần phát hiện đối tượng đã có sẵn, không cần tự xây lại |
+| AXIS Object Analytics | [help.axis.com](https://help.axis.com/en-us/axis-object-analytics) | Bước 3: lọc theo vùng giám sát và điều kiện cảnh báo | Phát hiện, phân loại, đếm đối tượng; thiết lập vùng giám sát, đường di chuyển và điều kiện cảnh báo | Cảnh báo theo điều kiện có sẵn chưa giải được bài nhận diện hành vi cụ thể của thú cưng và chưa liên kết dữ liệu nhiều nguồn | Có thể dùng làm lớp Rule lọc thô theo vùng và thời gian |
+| NVIDIA DeepStream | [DeepStream SDK](https://docs.nvidia.com/metropolis/deepstream/dev-guide/index.html) · [Multi-Object Tracker](https://docs.nvidia.com/metropolis/deepstream/text/DS_plugin_gst-nvtracker.html) | Bước 3–4: phát hiện và theo dõi đối tượng qua nhiều luồng camera | Nền tảng xây pipeline phân tích video thời gian thực, kết hợp object detection và multi-object tracking | Chỉ là nền tảng kỹ thuật, không phải giải pháp hoàn chỉnh xác định hành vi vi phạm và căn hộ liên quan | Khoảng trống thật của bài toán nằm ở nhận diện hành vi và liên kết dữ liệu, không phải ở detection |
+
+**Kết luận từ research:** công nghệ nhận diện đối tượng, theo dõi và cảnh báo đã tồn tại, nên nhóm không cần xây toàn bộ hệ thống camera AI từ đầu. Phát hiện được chó hay mèo không đồng nghĩa với phát hiện hành vi vi phạm; khoảng trống cần giải là nhận diện hành vi cụ thể và liên kết dữ liệu để hỗ trợ xác định căn hộ.
 
 ---
 
 ## 4. Phân tích quy trình hiện tại và đề xuất quy trình có AI
 
 ### 4.1. Quy trình hiện tại (As-is)
+
+![Quy trình hiện tại](../assets/cp5-workflow-current.png)
 
 **Mô tả quy trình:**
 
@@ -145,39 +151,39 @@ Nhìn chung, quy trình hiện tại phụ thuộc nhiều vào thao tác thủ 
 
 ### 4.2. Quy trình đề xuất (To-be)
 
+*Cập nhật sau CP6: bản đầu để AI đề xuất Top-3 căn hộ nghi vấn (xem Problem Statement v0, mục 5). Nhóm đã bỏ bước này; AI chỉ gợi ý thú cưng và lộ trình, căn hộ do BQL tự xác định (lý do ở mục 6.4 và mục 7).*
+
 **Mô tả quy trình có AI:**
 
 1. **CON NGƯỜI:** BQL tiếp nhận phản ánh về sự cố.
 2. **CON NGƯỜI:** Nhân viên xác định thời gian và khu vực xảy ra sự cố.
-3. **RULE:** Lọc camera và khoảng thời gian phù hợp dựa trên vị trí, thời điểm xảy ra sự cố.
-4. **AI:** Phân tích video để phát hiện các đối tượng và hành vi bất thường liên quan đến thú cưng.
-5. **AI:** Theo dõi người và thú cưng qua các camera liên quan để xác định lộ trình di chuyển.
-6. **RULE + AI:** Đối chiếu kết quả phân tích hình ảnh với dữ liệu ra vào, thang máy và thông tin đăng ký thú cưng.
-7. **AI:** Tổng hợp và đề xuất Top 3 căn hộ nghi vấn, kèm video, bằng chứng liên quan và điểm tin cậy.
-8. **CON NGƯỜI:** Nhân viên BQL kiểm tra bằng chứng, xác minh và chấp nhận hoặc từ chối đề xuất.
-9. **CON NGƯỜI:** BQL đưa ra quyết định xử lý sự cố.
+3. **RULE:** Lọc camera và khoảng thời gian phù hợp dựa trên vị trí, thời điểm trong phản ánh.
+4. **AI:** Phân tích video đã lọc, gắn cờ các đoạn nghi có hành vi vi phạm (phóng uế, không dắt dây, không rọ mõm khi bắt buộc, cắn người), kèm mốc thời gian, camera, ảnh chụp và độ tin cậy.
+5. **CON NGƯỜI (HITL):** Nhân viên xem các đoạn được gắn cờ, xác nhận có sự cố thật hoặc bác bỏ.
+6. **AI:** Với sự cố đã xác nhận, gợi ý (a) các đoạn video ở camera lân cận (hành lang, thang máy, sảnh) có cùng con vật trong khoảng thời gian tiếp theo, tức lộ trình di chuyển; (b) tối đa 3 thú cưng đã đăng ký có đặc điểm giống nhất (giống, màu lông, kích thước), kèm ảnh so sánh. **AI không nêu tên căn hộ.**
+7. **CON NGƯỜI (HITL):** Nhân viên xem video lộ trình, tự đối chiếu với dữ liệu thang máy, ra vào và hồ sơ đăng ký để xác định căn hộ liên quan.
+8. **CON NGƯỜI:** BQL quyết định hình thức xử lý; bằng chứng gửi cho cư dân là video gốc, không phải kết quả của AI.
 
 **Vai trò và giới hạn của AI:**
 
-- AI hỗ trợ phát hiện đối tượng, theo dõi lộ trình và tổng hợp dữ liệu từ nhiều nguồn.
-- AI chỉ đưa ra danh sách căn hộ nghi vấn kèm bằng chứng để hỗ trợ nhân viên kiểm tra.
-- Điểm tin cậy chỉ hỗ trợ ưu tiên kiểm tra, không thể hiện xác suất một căn hộ có lỗi hay khẳng định trách nhiệm của cư dân.
-- AI không tự kết luận cá nhân hoặc căn hộ vi phạm, không tự động đưa ra quyết định xử lý.
-- Nhân viên BQL là người kiểm tra bằng chứng và đưa ra quyết định cuối cùng.
+- AI chỉ làm 2 việc: gắn cờ đoạn video nghi vi phạm (bước 4) và gợi ý lộ trình, thú cưng tương đồng (bước 6).
+- AI không nêu tên căn hộ, không nhận diện danh tính người dắt, không tự kết luận vi phạm, không tự gửi thông báo hay quyết định xử lý.
+- Điểm tin cậy chỉ để ưu tiên thứ tự xem, không thể hiện xác suất một cư dân có lỗi.
+- Nhân viên BQL là người xác nhận sự cố, xác định căn hộ và quyết định cuối cùng.
 
 **Cơ chế dự phòng:**
 
-Nếu AI không tìm thấy đối tượng, kết quả có độ tin cậy thấp, dữ liệu không đầy đủ hoặc nhân viên BQL từ chối đề xuất, quy trình sẽ chuyển về phương thức kiểm tra thủ công hiện tại. Các trường hợp bị từ chối cần được ghi nhận để phục vụ đánh giá và cải thiện hệ thống.
+Nếu AI không gắn cờ được đoạn nào, kết quả có độ tin cậy thấp, dữ liệu không đầy đủ hoặc nhân viên bác bỏ gợi ý, quy trình chuyển về kiểm tra thủ công (tua camera trong khung giờ đã lọc ở bước 3). Mọi trường hợp bị bác bỏ hoặc bị bỏ sót đều được ghi nhận để đánh giá và cải thiện hệ thống.
 
 ### 4.3. So sánh quy trình trước và sau khi ứng dụng AI
 
 | Tiêu chí | Quy trình hiện tại | Quy trình đề xuất |
 |---|---|---|
-| Số bước | 6 bước | 9 bước |
-| Thời gian xử lý | Chưa đo lường | Mục tiêu giảm ít nhất 50% |
-| Số bước có thao tác thủ công | 6 bước (bước 1-6) | 4 bước (bước 1, 2, 8, 9) |
-| Công việc tốn nhiều thời gian | Tìm kiếm camera, theo dõi đối tượng và đối chiếu dữ liệu thủ công | Kiểm tra, xác minh đề xuất của AI; đây là nút thắt tiềm năng cần đánh giá thực tế |
-| Rủi ro | Tốn thời gian, phụ thuộc kinh nghiệm nhân viên, dễ bỏ sót dữ liệu | Theo dõi sai đối tượng, xác định nhầm căn hộ, dữ liệu camera hoặc dữ liệu đối chiếu không đầy đủ |
+| Số bước | 6 bước | 8 bước |
+| Thời gian xử lý | Chưa đo lường (đo trong 2 tuần đầu pilot) | Mục tiêu giảm ít nhất 50% |
+| Số bước có thao tác thủ công | 6 bước (bước 1–6) | 5 bước (bước 1, 2, 5, 7, 8), nhưng bước 5 và 7 chỉ xem các đoạn video đã được AI khoanh vùng thay vì tua toàn bộ |
+| Công việc tốn nhiều thời gian | Tìm kiếm camera, theo dõi đối tượng và đối chiếu dữ liệu thủ công | Xem và xác nhận các đoạn AI gắn cờ; nếu báo nhầm nhiều, đây sẽ là nút thắt mới cần đo trong pilot |
+| Rủi ro mới phát sinh | — | AI bỏ sót sự cố; gợi ý nhầm thú cưng khiến nhân viên nghi oan nếu không kiểm tra kỹ; rủi ro quyền riêng tư khi đưa video cư dân vào hệ thống AI |
 
 
 ---
@@ -268,32 +274,31 @@ Qua các góp ý, nhóm điều chỉnh quy trình theo hướng AI hỗ trợ p
 | **Quy trình** | **Hiện tại:** Ban quản lý tiếp nhận phản ánh, kiểm tra camera hoặc cử nhân viên xác minh, xác định sự việc và xử lý theo nội quy. Đây là quy trình giả định, cần xác nhận với ban quản lý thực tế. **Đề xuất:** Camera giám sát → AI phát hiện hành vi nghi vi phạm → ghi nhận hình ảnh, thời gian và vị trí → nhân viên xác minh → xử lý theo quy định. |
 | **Bottleneck** | Khó giám sát liên tục nhiều camera và phát hiện kịp thời các hành vi như không dắt dây, không đeo rọ mõm khi bắt buộc, chó cắn người hoặc động vật khác, thú cưng phóng uế không được dọn dẹp. Việc tìm kiếm bằng chứng và xác định chủ nuôi có thể tiêu tốn nhiều nhân lực, đặc biệt tại các khu đô thị lớn. |
 | **Impact** | Ảnh hưởng đến an toàn, vệ sinh môi trường, quyền lợi và chất lượng sống của cư dân. Đối với ban quản lý, các sự cố có thể làm tăng khối lượng giám sát, xử lý phản ánh và giải quyết tranh chấp. Hệ thống hướng đến giảm công việc thủ công, nâng cao hiệu quả quản lý và hỗ trợ thực thi nội quy. |
-| **Success Metric (baseline → target, cách đo)** | **Baseline:** Chưa có số liệu thực nghiệm về thời gian giám sát, chi phí xử lý hoặc độ chính xác phát hiện. **Target:** Giảm thời gian tìm kiếm và xác minh sự cố; nâng cao tỷ lệ phát hiện đúng; hạn chế cảnh báo sai. **Cách đo:** So sánh quy trình thủ công và quy trình có AI trên cùng tập video; đo Precision, Recall, số cảnh báo sai, thời gian xác minh và khối lượng công việc của nhân viên. Các ngưỡng cụ thể sẽ được xác định trước khi thử nghiệm. |
-| **Boundary** | Giai đoạn đầu ưu tiên tận dụng hệ thống CCTV hiện có, chưa bắt buộc triển khai thiết bị IoT. AI chỉ hỗ trợ phát hiện và cung cấp bằng chứng, không tự động kết luận trách nhiệm hoặc xử phạt. Việc xác định chủ nuôi bằng dữ liệu đăng ký và theo dõi liên camera chỉ được triển khai sau khi kiểm chứng độ tin cậy, quyền truy cập dữ liệu và cơ sở pháp lý. |
-| **AI intervention point** | Sử dụng Computer Vision để nhận diện thú cưng, dây dắt, rọ mõm và các hành vi liên quan trong video. Hệ thống phân tích chuỗi hình ảnh, đánh dấu sự kiện nghi vi phạm, lưu đoạn video làm bằng chứng và chuyển cảnh báo cho nhân viên kiểm tra. |
+| **Success Metric (baseline → target, cách đo)** | **Baseline:** Chưa có số liệu thực nghiệm về thời gian giám sát, chi phí xử lý hoặc độ chính xác phát hiện. Baseline sẽ được đo trong 2 tuần đầu pilot: nhân viên ghi lại thời gian tìm và xác minh từng sự cố theo cách thủ công. **Target (mục tiêu đề xuất, chưa phải kết quả):** (1) thời gian tìm và xác minh một sự cố giảm **≥ 50%** so với baseline; (2) **Recall ≥ 80%** và **Precision ≥ 60%** cho từng hành vi trong pilot (phóng uế, không dắt dây); (3) **0** trường hợp xử lý nhầm căn hộ. **Cách đo:** chạy AI trên bộ tối thiểu 100 đoạn video có nhãn (cả vi phạm và không vi phạm) của khu vực pilot để tính Recall/Precision; so sánh thời gian xử lý thủ công và có AI trên các sự cố thực trong 4 tuần pilot; ghi nhận mọi trường hợp BQL bác bỏ gợi ý của AI. |
+| **Boundary** | Giai đoạn đầu ưu tiên tận dụng hệ thống CCTV hiện có, chưa bắt buộc triển khai thiết bị IoT. AI chỉ hỗ trợ phát hiện và cung cấp bằng chứng, không tự động kết luận trách nhiệm hoặc xử phạt. **AI không nêu tên căn hộ, không nhận diện danh tính người**; AI chỉ gợi ý lộ trình qua camera và tối đa 3 thú cưng đã đăng ký có đặc điểm giống, còn căn hộ do nhân viên BQL tự xác định. **HITL:** nhân viên phải xác nhận từng đoạn AI gắn cờ trước khi truy vết, và phải xem trực tiếp video trước khi liên hệ bất kỳ căn hộ nào. Việc xác định chủ nuôi bằng dữ liệu đăng ký và theo dõi liên camera chỉ được triển khai sau khi kiểm chứng độ tin cậy, quyền truy cập dữ liệu và cơ sở pháp lý. |
+| **AI intervention point** | Sử dụng Computer Vision để nhận diện thú cưng, dây dắt, rọ mõm và các hành vi liên quan trong video. Hệ thống phân tích chuỗi hình ảnh, đánh dấu sự kiện nghi vi phạm, lưu đoạn video làm bằng chứng và chuyển cảnh báo cho nhân viên kiểm tra (bước 4, mục 4.2). Sau khi nhân viên xác nhận, AI gợi ý lộ trình qua camera lân cận và tối đa 3 thú cưng đã đăng ký tương đồng (bước 6). |
 | **Mức chọn** | **Workflow:** Kết hợp mô hình Computer Vision, quy tắc xác định hành vi, hệ thống lưu trữ sự cố và bước xác minh của con người. Chưa cần Agent tự chủ trong giai đoạn đầu. |
 | **Rủi ro & người kiểm tra** | Rủi ro gồm nhận diện sai, bỏ sót hành vi, chất lượng camera không đủ, nhầm lẫn giữa hành vi bình thường và vi phạm, xác định sai chủ nuôi, lộ dữ liệu cá nhân. Nhân viên an ninh và ban quản lý được phân quyền chịu trách nhiệm xác minh trước khi xử lý. |
 
 ### Thay đổi so với v0 và lý do:
 
-*Chưa có nội dung v0 gốc để đối chiếu. Bảng dưới đây nêu các điều chỉnh đề xuất cho v1, không khẳng định đây là những thay đổi đã thực hiện.*
+*So với Problem Statement v0 ở mục 5.1.*
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| Phạm vi dự án | Chưa cung cấp | Chia thành hai giai đoạn: CCTV và thử nghiệm khả thi trước; IoT và vòng đeo thông minh sau. | Giảm chi phí đầu tư ban đầu và kiểm chứng công nghệ trước khi mở rộng. |
-| Quy trình | Chưa cung cấp | Bổ sung quy trình từ phát hiện bằng AI đến xác minh và xử lý bởi ban quản lý. | Làm rõ trách nhiệm của hệ thống và con người. |
-| Success Metric | Chưa cung cấp | Đo Precision, Recall, cảnh báo sai, thời gian xác minh và khối lượng công việc. | Đánh giá bằng số liệu thay vì chỉ dự đoán lợi ích. |
-| Boundary | Chưa cung cấp | Không tự động xử phạt; giới hạn quyền truy cập thông tin cư dân. | Hạn chế rủi ro nhận diện sai và vi phạm quyền riêng tư. |
-| AI intervention point | Chưa cung cấp | Tập trung AI vào nhận diện và cảnh báo hành vi nghi vi phạm. | Tránh phụ thuộc ngay từ đầu vào hệ thống theo dõi liên camera và thiết bị IoT. |
+| Phạm vi sự cố | Sự cố thú cưng nói chung (phóng uế, thất lạc, gây thương tích) | 4 hành vi vi phạm nhận diện được qua camera: phóng uế, không dắt dây, không rọ mõm khi bắt buộc, cắn người. Pilot chỉ làm 2 hành vi (mục 8.2) | Góp ý ở mục 5.2: gộp nhiều loại sự cố làm phạm vi quá rộng. Bỏ "thất lạc" vì quy trình xử lý khác hẳn (tìm thú cưng, không phải tìm vi phạm) |
+| Boundary / AI intervention point | AI theo dõi đối tượng và **đề xuất tối đa 3 căn hộ nghi vấn** | AI chỉ gắn cờ đoạn video và gợi ý lộ trình, tối đa 3 thú cưng tương đồng; **không nêu tên căn hộ**, căn hộ do BQL tự xác định | Quy kết nhầm căn hộ gây mâu thuẫn giữa cư dân và mất niềm tin vào BQL (mục 6.4: báo nhầm ở bước này tệ hơn bỏ sót); giảm rủi ro dữ liệu cá nhân (Viability, mục 8.1) |
+| Success Metric | Giảm ≥ 50% thời gian xác định căn hộ; baseline chưa đo | Giữ mục tiêu giảm ≥ 50% thời gian, thêm Recall ≥ 80%, Precision ≥ 60% và 0 lần xử lý nhầm căn hộ; baseline đo trong 2 tuần đầu pilot | v0 chỉ đo tốc độ, không đo được AI đúng hay sai; và chưa nói rõ cách lấy baseline |
+| Phạm vi triển khai | Chưa đề cập | Hai giai đoạn: tận dụng CCTV và thử nghiệm khả thi trước; IoT và vòng đeo thông minh chỉ xét sau | Giảm chi phí đầu tư ban đầu và kiểm chứng công nghệ trước khi mở rộng |
 
 ### Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | **Độ chính xác cảnh báo (Precision)** | Tỷ lệ cảnh báo đúng đạt ngưỡng được thống nhất trước khi thử nghiệm trên tập video có nhãn độc lập. | Cảnh báo nhầm hành vi bình thường thành vi phạm vượt ngưỡng cho phép. |
-| 2 | **Khả năng phát hiện (Recall)** | Phát hiện đủ tỷ lệ các sự cố vi phạm thực tế trong tập video kiểm thử theo ngưỡng đã thống nhất. | Bỏ sót quá nhiều sự cố, đặc biệt các hành vi có nguy cơ ảnh hưởng đến an toàn cư dân. |
+| 1 | **Độ chính xác cảnh báo (Precision)** | Precision **≥ 60%** cho từng hành vi trong pilot, đo trên tập video có nhãn độc lập (tối thiểu 100 đoạn). | Precision < 60%: hơn 4/10 cảnh báo là nhầm hành vi bình thường thành vi phạm. |
+| 2 | **Khả năng phát hiện (Recall)** | Recall **≥ 80%**: phát hiện ít nhất 8/10 sự cố vi phạm thực tế trong tập video kiểm thử. | Recall < 80%, hoặc bỏ sót bất kỳ sự cố nào có nguy cơ ảnh hưởng đến an toàn cư dân. |
 | 3 | **Chất lượng bằng chứng** | Mỗi cảnh báo có thời gian, vị trí camera, đoạn video liên quan và mô tả hành vi để nhân viên kiểm tra. | Bằng chứng thiếu, sai thời điểm hoặc không đủ để xác minh sự việc. |
-| 4 | **Hiệu quả vận hành** | Thời gian và công sức xác minh mỗi sự cố được xác nhận giảm so với quy trình thủ công, sau khi tính cả thời gian xử lý cảnh báo sai. | Hệ thống làm tăng khối lượng công việc hoặc không tạo ra cải thiện đáng kể. |
+| 4 | **Hiệu quả vận hành** | Thời gian tìm và xác minh mỗi sự cố giảm **≥ 50%** so với baseline, sau khi đã tính cả thời gian xử lý cảnh báo sai. | Thời gian giảm dưới 30%, hoặc thời gian xử lý cảnh báo sai lớn hơn thời gian tiết kiệm được. |
 | 5 | **An toàn dữ liệu và kiểm soát con người** | Dữ liệu được quản lý theo phân quyền; mọi quyết định xử lý vi phạm đều có người kiểm tra. | Dữ liệu bị truy cập trái phép, xác định sai chủ nuôi hoặc tự động áp dụng hình thức xử phạt khi chưa được xác minh. |
 
 ---
@@ -304,7 +309,7 @@ Qua các góp ý, nhóm điều chỉnh quy trình theo hướng AI hỗ trợ p
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **TB** | Các vấn đề về an toàn, vệ sinh và quản lý thú cưng có khả năng tạo ra nhu cầu thực tế tại khu dân cư. Nhóm đã thực hiện khảo sát và thu thập đánh giá, nhưng chưa có kết quả chi tiết để xác định mức độ nhu cầu, tần suất vi phạm và khả năng chấp nhận sử dụng của ban quản lý. |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **TB** | Các vấn đề về an toàn, vệ sinh và quản lý thú cưng có khả năng tạo ra nhu cầu thực tế tại khu dân cư. Tuy nhiên, báo cáo chưa có kết quả phỏng vấn hoặc khảo sát với ban quản lý, nhân viên an ninh hay cư dân, nên chưa xác định được mức độ nhu cầu, tần suất vi phạm và khả năng chấp nhận sử dụng. Đây là giả định cần kiểm chứng đầu tiên. |
 | **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | **TB** | Hệ thống dự kiến cung cấp cảnh báo kèm video bằng chứng để nhân viên xác minh. Tuy nhiên, chưa có sản phẩm mẫu để kiểm tra giao diện, mức độ dễ sử dụng, khả năng sửa kết quả AI hoặc xử lý cảnh báo sai. |
 | **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Cao** | Công nghệ Computer Vision có thể hỗ trợ nhận diện động vật và vật thể, đồng thời hệ thống CCTV hiện có có khả năng được tận dụng nếu đáp ứng điều kiện kỹ thuật. Tuy nhiên, việc nhận diện bốn nhóm hành vi, thu thập video có nhãn, phát hiện sự kiện theo thời gian và theo dõi thú cưng qua nhiều camera vẫn cần thử nghiệm. |
 | **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **Cao** | Mô hình có tiềm năng giảm chi phí giám sát thủ công và hỗ trợ quản lý khu đô thị lớn. Tuy nhiên, chưa có số liệu chứng minh hiệu quả tài chính. Cần đánh giá chi phí xử lý video, bảo trì, bảo vệ dữ liệu cá nhân, thẩm quyền quản lý và tính hợp pháp của các hình thức xử lý vi phạm. Doanh thu từ tiền phạt chưa thể coi là nguồn thu chắc chắn. |
@@ -325,8 +330,8 @@ Do đó, cần ưu tiên kiểm chứng công nghệ và nhu cầu vận hành t
 
 **Nếu Go — pilot nhỏ nhất:**
 
-1. Lựa chọn một khu vực hoặc một số camera giám sát được cấp phép sử dụng để thử nghiệm.
-2. Ưu tiên một đến hai hành vi có thể định nghĩa rõ và có dữ liệu phù hợp, chẳng hạn chó không được dắt dây và hành vi liên quan đến chất thải thú cưng.
+1. Thử nghiệm trong **4 tuần** tại **một khu vực** (sảnh và thang máy của một tòa), chỉ dùng các camera được BQL cấp phép.
+2. Chỉ thử **2 hành vi**: **thú cưng phóng uế** (xảy ra thường xuyên nhất, dễ có dữ liệu) và **không dắt dây** (dễ định nghĩa, dễ nhận diện). Chưa đưa "không rọ mõm" và "cắn người" vào pilot: rọ mõm là vật nhỏ, khó thấy qua camera xa; cắn người quá hiếm nên không đủ dữ liệu để đánh giá.
 3. Thu thập hoặc xây dựng bộ video có nhãn, bao gồm trường hợp vi phạm và không vi phạm.
 4. Xây dựng mô hình nhận diện và hệ thống tạo cảnh báo kèm video bằng chứng.
 5. Đánh giá Precision, Recall, tỷ lệ cảnh báo sai, thời gian xác minh và chi phí xử lý.
@@ -348,11 +353,10 @@ Do đó, cần ưu tiên kiểm chứng công nghệ và nhu cầu vận hành t
 
 **Ngưỡng dừng** (nếu sau … mà … thì quay về …):
 
-Trước khi thử nghiệm, nhóm xác định thời gian thử nghiệm, ngân sách tối đa, ngưỡng Precision và Recall tối thiểu, tỷ lệ cảnh báo sai cho phép và yêu cầu bảo vệ dữ liệu.
+- **Nếu sau 4 tuần pilot** mà Recall < 70% hoặc Precision < 50% ở cả 2 hành vi, **hoặc** thời gian tìm và xác minh sự cố giảm dưới 30% so với baseline, **thì** dừng phần AI và **quay về** quy trình thủ công cộng Rule (khoanh vùng camera theo vị trí và giờ trong phản ánh, mẫu phản ánh chuẩn).
+- **Nếu chỉ 1 trong 2 hành vi đạt ngưỡng** ở mục 7 (Recall ≥ 80%, Precision ≥ 60%), **thì** chỉ giữ hành vi đạt, tiếp tục thêm 4 tuần trước khi cân nhắc mở rộng.
+- **Dừng ngay lập tức** chức năng liên quan nếu có **bất kỳ** trường hợp nào BQL xử lý nhầm căn hộ dựa trên gợi ý của AI, hoặc phát sinh vi phạm về quyền riêng tư (video bị truy cập ngoài phân quyền).
 
-Nếu sau thời gian thử nghiệm mà mô hình không đạt các ngưỡng đã thống nhất, chi phí vận hành vượt ngân sách hoặc khối lượng xử lý cảnh báo sai làm tăng công việc của nhân viên, nhóm sẽ tạm dừng mở rộng hệ thống và quay lại cải thiện dữ liệu, mô hình hoặc quy trình giám sát thủ công.
-
-Nếu phát sinh vi phạm nghiêm trọng về quyền riêng tư hoặc xử lý vi phạm trái thẩm quyền, phải dừng chức năng liên quan ngay để đánh giá và khắc phục.
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
@@ -386,6 +390,14 @@ Nếu phát sinh vi phạm nghiêm trọng về quyền riêng tư hoặc xử l
 3. **Làm rõ quyền riêng tư:** xây quy định truy cập video (chỉ ban quản lý được xem, có ghi log), ưu tiên xử lý video ngay trên hệ thống của chung cư thay vì gửi ra ngoài, thông báo công khai cho cư dân trước khi áp dụng.
 
 ## 10. Tài liệu tham khảo
+
+**Research giải pháp đã có (mục 3.3)**
+
+- [Frigate NVR — Official Documentation](https://docs.frigate.video/) · [Object Detectors](https://docs.frigate.video/configuration/object_detectors/) · [Review, Alerts and Detections](https://docs.frigate.video/configuration/review/)
+- [AXIS Object Analytics — Official Documentation](https://help.axis.com/en-us/axis-object-analytics)
+- [NVIDIA DeepStream SDK — Official Documentation](https://docs.nvidia.com/metropolis/deepstream/dev-guide/index.html) · [Multi-Object Tracker](https://docs.nvidia.com/metropolis/deepstream/text/DS_plugin_gst-nvtracker.html)
+
+**Framework (mục 6–8)**
 
 Anthropic — [Building effective agents](https://www.anthropic.com/research/building-effective-agents): phân biệt Workflow và Agent, nguyên tắc chọn mức đơn giản nhất đủ dùng.
 
