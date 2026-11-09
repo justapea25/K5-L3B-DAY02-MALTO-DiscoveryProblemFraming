@@ -175,7 +175,7 @@ Nếu AI không tìm thấy đối tượng, kết quả có độ tin cậy th�
 |---|---|---|
 | Số bước | 6 bước | 9 bước |
 | Thời gian xử lý | Chưa đo lường | Mục tiêu giảm ít nhất 50% |
-| Số bước có thao tác thủ công | 6 bước (bước 1–6) | 4 bước (bước 1, 2, 8, 9) |
+| Số bước có thao tác thủ công | 6 bước (bước 1-6) | 4 bước (bước 1, 2, 8, 9) |
 | Công việc tốn nhiều thời gian | Tìm kiếm camera, theo dõi đối tượng và đối chiếu dữ liệu thủ công | Kiểm tra, xác minh đề xuất của AI; đây là nút thắt tiềm năng cần đánh giá thực tế |
 | Rủi ro | Tốn thời gian, phụ thuộc kinh nghiệm nhân viên, dễ bỏ sót dữ liệu | Theo dõi sai đối tượng, xác định nhầm căn hộ, dữ liệu camera hoặc dữ liệu đối chiếu không đầy đủ |
 
