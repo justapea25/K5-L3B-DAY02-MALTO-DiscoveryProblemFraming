@@ -318,8 +318,6 @@ Lưu ý: Mục tiêu 50% là target đề xuất, chưa phải kết quả thử
 
 ## 6. Reflection (CP7)
 
-## 6. Reflection cá nhân
-
 ### 6.1. Điều em nhận ra về việc xác định vấn đề
 
 Qua bài tập này, em nhận ra rằng xác định vấn đề không đơn giản là tìm một tình huống có thể ứng dụng AI, mà quan trọng hơn là hiểu người dùng thực sự đang gặp khó khăn gì và họ cần đạt được điều gì.
