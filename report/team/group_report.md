@@ -122,60 +122,89 @@ Tổng hợp:
 
 ---
 
-## 4. Quy trình trước/sau (CP5)
+## 4. Phân tích quy trình hiện tại và đề xuất quy trình có AI
 
-### 4.1. Quy trình hiện tại
+### 4.1. Quy trình hiện tại (As-is)
 
-Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
+**Mô tả quy trình:**
 
-```text
+1. Ban quản lý (BQL) tiếp nhận phản ánh về sự cố liên quan đến thú cưng.
+2. Xác định thời gian và khu vực xảy ra sự cố.
+3. Tìm kiếm thủ công trên các camera tại khu vực và khoảng thời gian liên quan.
+4. Theo dõi người dắt thú cưng qua nhiều camera để xác định lộ trình di chuyển.
+5. Đối chiếu hình ảnh với dữ liệu ra vào, thang máy và thông tin đăng ký thú cưng.
+6. Xác định căn hộ liên quan và chuyển thông tin cho BQL xử lý.
 
-```
+**Các điểm nghẽn chính:**
 
-| Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
-|---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+- **Bước 3:** Nhân viên phải tìm kiếm thủ công trên nhiều camera và khung thời gian khác nhau.
+- **Bước 4:** Việc theo dõi người và thú cưng qua nhiều camera phụ thuộc vào khả năng quan sát và kinh nghiệm của nhân viên.
+- **Bước 5:** Việc đối chiếu hình ảnh với dữ liệu ra vào, thang máy và thông tin đăng ký thú cưng mất thời gian, đặc biệt khi dữ liệu nằm ở nhiều nguồn khác nhau.
 
-**Bottleneck chính:**
+Nhìn chung, quy trình hiện tại phụ thuộc nhiều vào thao tác thủ công, khó mở rộng khi số lượng camera và sự cố tăng lên. Thời gian xử lý thực tế chưa được đo lường nên cần khảo sát để xác định đường cơ sở.
 
-### 4.2. Quy trình tương lai
+### 4.2. Quy trình đề xuất (To-be)
 
-Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
+**Mô tả quy trình có AI:**
 
-```text
+1. **CON NGƯỜI:** BQL tiếp nhận phản ánh về sự cố.
+2. **CON NGƯỜI:** Nhân viên xác định thời gian và khu vực xảy ra sự cố.
+3. **RULE:** Lọc camera và khoảng thời gian phù hợp dựa trên vị trí, thời điểm xảy ra sự cố.
+4. **AI:** Phân tích video để phát hiện các đối tượng và hành vi bất thường liên quan đến thú cưng.
+5. **AI:** Theo dõi người và thú cưng qua các camera liên quan để xác định lộ trình di chuyển.
+6. **RULE + AI:** Đối chiếu kết quả phân tích hình ảnh với dữ liệu ra vào, thang máy và thông tin đăng ký thú cưng.
+7. **AI:** Tổng hợp và đề xuất Top 3 căn hộ nghi vấn, kèm video, bằng chứng liên quan và điểm tin cậy.
+8. **CON NGƯỜI:** Nhân viên BQL kiểm tra bằng chứng, xác minh và chấp nhận hoặc từ chối đề xuất.
+9. **CON NGƯỜI:** BQL đưa ra quyết định xử lý sự cố.
 
-```
+**Vai trò và giới hạn của AI:**
 
-### 4.3. Before / after
+- AI hỗ trợ phát hiện đối tượng, theo dõi lộ trình và tổng hợp dữ liệu từ nhiều nguồn.
+- AI chỉ đưa ra danh sách căn hộ nghi vấn kèm bằng chứng để hỗ trợ nhân viên kiểm tra.
+- Điểm tin cậy chỉ hỗ trợ ưu tiên kiểm tra, không thể hiện xác suất một căn hộ có lỗi hay khẳng định trách nhiệm của cư dân.
+- AI không tự kết luận cá nhân hoặc căn hộ vi phạm, không tự động đưa ra quyết định xử lý.
+- Nhân viên BQL là người kiểm tra bằng chứng và đưa ra quyết định cuối cùng.
 
-| Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
-|---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+**Cơ chế dự phòng:**
+
+Nếu AI không tìm thấy đối tượng, kết quả có độ tin cậy thấp, dữ liệu không đầy đủ hoặc nhân viên BQL từ chối đề xuất, quy trình sẽ chuyển về phương thức kiểm tra thủ công hiện tại. Các trường hợp bị từ chối cần được ghi nhận để phục vụ đánh giá và cải thiện hệ thống.
+
+### 4.3. So sánh quy trình trước và sau khi ứng dụng AI
+
+| Tiêu chí | Quy trình hiện tại | Quy trình đề xuất |
+|---|---|---|
+| Số bước | 6 bước | 9 bước |
+| Thời gian xử lý | Chưa đo lường | Mục tiêu giảm ít nhất 50% |
+| Số bước có thao tác thủ công | 6 bước (bước 1–6) | 4 bước (bước 1, 2, 8, 9) |
+| Công việc tốn nhiều thời gian | Tìm kiếm camera, theo dõi đối tượng và đối chiếu dữ liệu thủ công | Kiểm tra, xác minh đề xuất của AI; đây là nút thắt tiềm năng cần đánh giá thực tế |
+| Rủi ro | Tốn thời gian, phụ thuộc kinh nghiệm nhân viên, dễ bỏ sót dữ liệu | Theo dõi sai đối tượng, xác định nhầm căn hộ, dữ liệu camera hoặc dữ liệu đối chiếu không đầy đủ |
+
 
 ---
 
-## 5. Problem Statement v0 (CP5)
+## 5. Problem Statement
 
-| Trường | Nội dung |
+### 5.1. Phát biểu vấn đề
+
+| Thành phần | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Ban quản lý và nhân viên an ninh tại khu dân cư. |
+| **Quy trình** | Tiếp nhận phản ánh về sự cố liên quan đến thú cưng, tìm kiếm hình ảnh camera, theo dõi đối tượng và đối chiếu dữ liệu để xác định căn hộ liên quan. |
+| **Bottleneck** | Quá trình tìm kiếm thủ công trên nhiều camera, theo dõi người và thú cưng qua nhiều khu vực, đồng thời đối chiếu dữ liệu từ nhiều nguồn khác nhau. |
+| **Impact** | Kéo dài thời gian xác minh và xử lý sự cố, tăng khối lượng công việc cho nhân viên, ảnh hưởng đến vệ sinh, an toàn và trải nghiệm cư dân. |
+| **Metric** | Mục tiêu giảm ít nhất 50% thời gian xác định căn hộ liên quan so với quy trình hiện tại. Đường cơ sở cần được đo lường trước khi triển khai. |
+| **Boundary** | AI chỉ hỗ trợ phân tích hình ảnh, theo dõi đối tượng và đề xuất tối đa 3 căn hộ nghi vấn kèm bằng chứng. AI không tự kết luận vi phạm hoặc quyết định xử lý. Nhân viên BQL phải xác minh trước khi đưa ra quyết định. Nếu kết quả không đáng tin cậy hoặc dữ liệu không đủ, hệ thống chuyển về quy trình thủ công. |
 
-Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
+### 5.2. Phản hồi và điều chỉnh Problem Statement
 
--
+Sau khi trao đổi và nhận góp ý, nhóm nhận thấy một số điểm cần làm rõ:
+
+- **Problem Card đang gộp nhiều loại sự cố:** Các tình huống như thú cưng đi vệ sinh không đúng nơi, thất lạc hoặc gây thương tích có đặc điểm xử lý khác nhau. Nhóm cần xác định rõ phạm vi sự cố ưu tiên.
+- **Chưa phân biệt phát hiện đối tượng và phát hiện hành vi:** Nhận diện được chó hoặc người dắt chó chưa đồng nghĩa với việc xác định được hành vi bất thường. Nhóm bổ sung bước phân tích hành vi vào quy trình đề xuất.
+- **Chưa có số liệu thời gian xử lý ban đầu:** Nhóm chưa có dữ liệu đo lường thực tế nên chỉ đặt mục tiêu giảm ít nhất 50%, chưa khẳng định đây là hiệu quả đã đạt được.
+- **Nguy cơ xác định nhầm căn hộ:** Chỉ dựa vào hình ảnh camera có thể dẫn đến quy kết sai. Nhóm bổ sung bước đối chiếu dữ liệu ra vào, thang máy, thông tin đăng ký thú cưng và yêu cầu nhân viên BQL xác minh trước khi xử lý.
+
+Qua các góp ý, nhóm điều chỉnh quy trình theo hướng AI hỗ trợ phân tích và đề xuất có bằng chứng, trong khi con người vẫn giữ quyền kiểm tra và quyết định cuối cùng.
 
 ---
 

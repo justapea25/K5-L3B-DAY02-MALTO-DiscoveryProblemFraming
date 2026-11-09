@@ -196,7 +196,7 @@ Tổng hợp và phân loại thông tin từ nhiều kênh không đồng nhấ
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-Trong phạm vi thông tin và hoạt động nhóm đã ghi nhận, tôi tham gia trực tiếp vào CP4 và CP5, tập trung vào research giải pháp công nghệ và phân tích quy trình trước/sau.
+Trong phạm vi thông tin và hoạt động nhóm đã ghi nhận, tôi tham gia trực tiếp CP5, tập trung vào research giải pháp công nghệ và phân tích quy trình trước/sau.
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
@@ -205,26 +205,11 @@ Trong phạm vi thông tin và hoạt động nhóm đã ghi nhận, tôi tham g
 | Nhận phản biện | Tiếp nhận các vấn đề cần làm rõ về khả năng phát hiện hành vi, truy vết và xác định căn hộ. | Làm rõ sự khác biệt giữa phát hiện đối tượng và nhận diện hành vi; bổ sung yêu cầu đối chiếu dữ liệu. |
 | Gom cluster / cây OST | Tham gia quá trình hội tụ ý tưởng của nhóm. | Nhóm tập trung phát triển candidate về truy vết sự cố thú cưng. |
 | Chọn candidate problem | Tham gia lựa chọn bài toán thú cưng làm bài toán được phát triển tiếp. | Nhóm thống nhất hướng nghiên cứu về phát hiện, truy vết và xác định căn hộ liên quan. |
-| **Kiểm chứng / research (CP4)** | Nghiên cứu ba giải pháp: Frigate NVR, AXIS Object Analytics và NVIDIA DeepStream. Phân tích khả năng phát hiện đối tượng, phân tích chuyển động, theo dõi và xử lý video. | Nhận ra các công nghệ phát hiện đối tượng và cảnh báo đã tồn tại. Nhóm không cần xây dựng lại toàn bộ hệ thống mà cần tập trung vào khoảng trống nhận diện hành vi cụ thể và liên kết dữ liệu để truy vết. |
 | **Quy trình nhóm (CP5)** | Phân tích quy trình hiện tại của BQL từ tiếp nhận phản ánh, xác định vị trí, tìm kiếm camera đến đối chiếu dữ liệu ra vào và hồ sơ thú cưng. Tham gia đề xuất quy trình tương lai có AI hỗ trợ. | Xác định bottleneck chính là tìm kiếm, truy vết và đối chiếu thủ công, thay vì chỉ nằm ở bước phát hiện sự cố. |
 | Problem Statement | Tham gia làm rõ actor, bottleneck, impact và success metric của bài toán. | Làm rõ mục tiêu giảm ít nhất 50% thời gian xác định căn hộ, với kết quả cần được kiểm chứng qua thử nghiệm. |
 | Mức can thiệp AI | Tham gia phân tích lựa chọn mức AI Workflow thay vì Agent. | Định hướng giải pháp theo quy trình có các bước xác định trước, AI hỗ trợ những công đoạn cần nhận diện và phân tích, con người kiểm tra kết quả. |
 | Quyết định | Tham gia làm rõ lý do lựa chọn AI Workflow và các giới hạn cần có. | Nhấn mạnh khả năng kiểm soát, truy xuất bằng chứng và xác nhận của con người trước khi xử lý sự cố. |
 
-### CP4 — Research giải pháp hiện có
-
-Nhóm nghiên cứu ba giải pháp công nghệ:
-
-| Giải pháp | Khả năng chính | Khoảng trống đối với bài toán nhóm |
-|---|---|---|
-| Frigate NVR | Phát hiện đối tượng trong video camera, theo dõi đối tượng, phân loại cảnh báo và hỗ trợ xem lại các đoạn video đáng chú ý. | Phát hiện chó, mèo hoặc người chưa đồng nghĩa với nhận diện được hành vi phóng uế, tấn công hay xác định căn hộ liên quan. |
-| AXIS Object Analytics | Phát hiện, phân loại và đếm đối tượng; thiết lập vùng giám sát, đường di chuyển và điều kiện cảnh báo. | Khả năng phân loại đối tượng và cảnh báo theo điều kiện có sẵn chưa giải quyết toàn bộ bài toán nhận diện hành vi cụ thể của thú cưng và liên kết dữ liệu nhiều nguồn. |
-| NVIDIA DeepStream | Nền tảng xây dựng pipeline phân tích video thời gian thực, kết hợp object detection, multi-object tracking và xử lý nhiều luồng camera. | Là nền tảng kỹ thuật để xây dựng hệ thống, không phải một giải pháp hoàn chỉnh tự động xác định hành vi vi phạm và căn hộ liên quan. |
-
-Hai nhận định rút ra từ research:
-
-1. Công nghệ nhận diện đối tượng, theo dõi và gửi cảnh báo đã tồn tại. Do đó, nhóm không nhất thiết phải xây dựng toàn bộ hệ thống camera AI từ đầu mà có thể tận dụng các thành phần phù hợp.
-2. Phát hiện chó hoặc mèo không đồng nghĩa với phát hiện hành vi vi phạm. Khoảng trống cần giải quyết là nhận diện hành vi cụ thể của thú cưng, truy vết mối liên hệ người - chó qua nhiều camera và kết hợp dữ liệu để hỗ trợ xác định căn hộ.
 
 ### CP5 — Phân tích quy trình trước và sau
 
@@ -308,7 +293,6 @@ Lưu ý: Mục tiêu 50% là target đề xuất, chưa phải kết quả thử
 |---|---|---|---|---|
 | CP1 Scan | Hỗ trợ mở rộng góc nhìn và hệ thống hóa các vấn đề theo Job Story. | Gợi ý các tình huống có thể phát sinh từ học tập, công việc và đời sống. | Một số gợi ý dễ chung chung, thiên về giải pháp hoặc chưa có dấu hiệu vấn đề thực tế. | Chỉ giữ các vấn đề có actor và bối cảnh cụ thể; không xem ý tưởng do AI đề xuất là bằng chứng. |
 | CP2 Problem Card | Hỗ trợ rà soát Job Story, actor, bottleneck và metric. | Giúp phát hiện các điểm còn thiếu trong mô tả bài toán. | Có thể đề xuất metric hoặc thời gian tiết kiệm khi chưa có dữ liệu baseline. | Không sử dụng các con số giả định như kết quả thực tế; phân biệt rõ target với baseline cần đo. |
-| CP4 Research | Hỗ trợ tìm hiểu và hệ thống hóa các công nghệ Frigate NVR, AXIS Object Analytics và NVIDIA DeepStream. | Giúp so sánh chức năng phát hiện đối tượng, cảnh báo, tracking và xử lý video. | Nếu chỉ nhìn vào khả năng object detection, dễ kết luận nhầm rằng hệ thống đã giải quyết được bài toán nhận diện hành vi. | Đối chiếu tài liệu chính thức và xác định khoảng trống giữa phát hiện đối tượng với nhận diện hành vi, truy vết và xác định căn hộ. |
 | CP5 Quy trình | Hỗ trợ hệ thống hóa quy trình hiện tại và quy trình tương lai. | Giúp phân tách các công đoạn, xác định điểm cần Rule, AI và con người tham gia. | Có thể gộp các bước khác nhau thành một bước, khiến bottleneck và trách nhiệm của từng actor không rõ. | Giữ riêng các bước tìm kiếm camera, tracking, đối chiếu dữ liệu và xác nhận của BQL. |
 | CP5-6 Problem Statement | Hỗ trợ rà soát tính rõ ràng của problem, impact, metric và boundary. | Giúp nhận diện sự khác biệt giữa mục tiêu của bài toán và giải pháp công nghệ. | Dễ đưa giải pháp vào Problem Statement hoặc đề xuất phạm vi quá rộng. | Tập trung vào mục tiêu giảm thời gian truy vết, đồng thời giữ giới hạn AI không tự kết luận vi phạm. |
 | CP6 Mức can thiệp / quyết định | Hỗ trợ phân tích sự khác biệt giữa No AI, Rule, Workflow và Agent. | Giúp so sánh mức độ phức tạp, khả năng kiểm soát và sự cần thiết của từng mức. | Agent có thể được đề xuất quá sớm dù quy trình đã có các bước xác định trước. | Lựa chọn AI Workflow vì bài toán đã có quy trình tương đối rõ; chỉ sử dụng AI tại những bước cần khả năng nhận diện, phân tích và tổng hợp. |
