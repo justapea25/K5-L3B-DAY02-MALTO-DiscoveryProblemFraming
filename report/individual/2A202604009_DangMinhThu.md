@@ -60,30 +60,19 @@ AI hỗ trợ mở rộng các tình huống có thể ứng dụng AI trong cô
 
 **Quy trình nháp hiện tại:**
 
-```text
-[Tiếp nhận email / chat / ticket / form]
-                    |
-                    v
-         [Đọc từng yêu cầu]
-                    |
-                    v
-       [Tổng hợp và phân loại]
-                    |
-                    v
-       [Xác định mức độ ưu tiên]
-                    |
-                    v
-       [Tìm người/đơn vị phụ trách]
-                    |
-                    v
-         [Chuyển giao xử lý]
-                    |
-                    v
-          [Theo dõi tiến độ]
+| Bước | Công việc | Thời gian ước tính |
+|---|---|---:|
+| 1 | Kiểm tra các kênh tiếp nhận (email, chat, ticket, form) | 1–2 phút |
+| 2 | Đọc nội dung từng yêu cầu | 2–4 phút |
+| 3 | Xác định vấn đề và deadline | 1–2 phút |
+| 4 | Đánh giá mức độ ưu tiên | 1–2 phút |
+| 5 | Xác định người hoặc đơn vị phụ trách | 1–3 phút |
+| 6 | Chuyển giao yêu cầu | 1–2 phút |
+| 7 | Theo dõi tiến độ | 1–2 phút/lần kiểm tra |
+| **Tổng trước khi theo dõi** | | **7–15 phút/yêu cầu** |
 
-BOTTLENECK:
-Tổng hợp và phân loại thông tin từ nhiều kênh không đồng nhất.
-```
+**BOTTLENECK:**
+Đọc nội dung và xác định vấn đề, deadline (bước 2–3), mất khoảng 3–6 phút/yêu cầu. Khi yêu cầu đến từ nhiều kênh, có nội dung không đồng nhất hoặc thiếu thông tin, nhân viên phải đọc và tổng hợp thủ công trước khi phân loại.
 
 ### Problem Card #2
 
@@ -102,27 +91,18 @@ Tổng hợp và phân loại thông tin từ nhiều kênh không đồng nhấ
 
 **Quy trình nháp hiện tại:**
 
-```text
-[Tiếp nhận hồ sơ]
-        |
-        v
-[Mở, đọc từng giấy tờ]
-        |
-        v
-[Nhập / ghi lại thông tin]
-        |
-        v
-[Đối chiếu với tiêu chí và giữa các giấy tờ]
-        |
-        v
-[Phát hiện giấy tờ thiếu / sai lệch]
-        |
-        v
-[Liên hệ bổ sung, chuyển xét duyệt]
+| Bước | Công việc | Thời gian ước tính |
+|---|---|---:|
+| 1 | Tiếp nhận và kiểm tra hồ sơ | 2–3 phút |
+| 2 | Mở và đọc từng giấy tờ | 5–10 phút |
+| 3 | Nhập hoặc ghi lại thông tin cần thiết | 3–5 phút |
+| 4 | Đối chiếu với tiêu chí và giữa các giấy tờ | 5–10 phút |
+| 5 | Phát hiện giấy tờ thiếu hoặc sai lệch | 2–4 phút |
+| 6 | Liên hệ ứng viên bổ sung và chuyển hồ sơ đi xét duyệt | 2–5 phút (chưa tính thời gian chờ phản hồi) |
+| **Tổng** | | **19–37 phút/hồ sơ** |
 
-BOTTLENECK:
-Đọc, nhập lại và đối chiếu thủ công thông tin từ nhiều định dạng tài liệu.
-```
+**BOTTLENECK:**
+Đọc, nhập lại và đối chiếu thông tin (bước 2–4), mất khoảng 13–25 phút/hồ sơ. Nhân viên phải xử lý từng tài liệu riêng lẻ, nhập lại thông tin và kiểm tra tính nhất quán giữa các giấy tờ.
 
 
 ### Problem Card #3
@@ -142,27 +122,18 @@ BOTTLENECK:
 
 **Quy trình nháp hiện tại:**
 
-```text
-[Thu thập báo giá]
-        |
-        v
-[Đọc từng báo giá]
-        |
-        v
-[Trích thông tin chính]
-        |
-        v
-[Tổng hợp bảng so sánh]
-        |
-        v
-[Đánh giá theo tiêu chí]
-        |
-        v
-[Trình quản lý, chọn nhà cung cấp]
+| Bước | Công việc | Thời gian ước tính |
+|---|---|---:|
+| 1 | Thu thập báo giá từ các nhà cung cấp | 3–5 phút |
+| 2 | Đọc từng báo giá | 5–10 phút |
+| 3 | Trích các thông tin chính (giá, điều kiện, thời gian giao, bảo hành) | 5–10 phút |
+| 4 | Tổng hợp vào bảng so sánh | 5–10 phút |
+| 5 | Đánh giá theo tiêu chí chi phí, chất lượng và điều kiện | 5–10 phút |
+| 6 | Trình quản lý và chọn nhà cung cấp | 2–5 phút |
+| **Tổng** | | **25–50 phút/bộ báo giá** |
 
-BOTTLENECK:
-Chuẩn hóa và so sánh báo giá không đồng nhất về cấu trúc và điều kiện.
-```
+**BOTTLENECK:**
+Trích xuất thông tin và tổng hợp bảng so sánh (bước 3–4), mất khoảng 10–20 phút/bộ báo giá. Các báo giá thường khác nhau về cấu trúc, cách trình bày, đơn vị tính và điều kiện nên nhân viên phải chuẩn hóa thông tin trước khi so sánh.
 
 
 ### Card muốn pitch nhất
