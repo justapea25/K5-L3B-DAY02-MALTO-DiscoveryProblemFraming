@@ -1,8 +1,6 @@
 # Báo cáo nhóm — Day 02 Discovery & Problem Framing
 
-> Repo nhóm MALTO · K5-L3B. CP3 đã tổng hợp từ **đủ 4 báo cáo cá nhân** (Đậu Hoàng Minh, Nguyễn Xuân Khánh Linh, Đặng Minh Thu, Lê Thế Anh). Bảng 12 candidate là bản tổng hợp từ các Problem Cards; bảng điểm CP3 là đánh giá đề xuất của AI, không phải kết quả biểu quyết chính thức của nhóm. Lượt pitch chưa ghi nhận đầy đủ cần nhóm xác nhận. **CP4: nhóm xác nhận chưa thực hiện phỏng vấn hay khảo sát (0 interview, 0 survey)**; hiện chỉ có lời kể ban đầu từ một cư dân và research thứ cấp. Các mốc đo và ngưỡng đánh giá trong CP5–CP6 là **mục tiêu đề xuất**, không phải kết quả thực nghiệm.
->
-> Worksheet: [docs/01-worksheet.md](../../docs/01-worksheet.md) · Bài mẫu: [docs/02-deliverable-example.md](../../docs/02-deliverable-example.md).
+> Repo nhóm MALTO · K5-L3B
 
 ## 1. Thông tin nhóm
 
@@ -22,7 +20,7 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | Nguyễn Xuân Khánh Linh | Khi creative đã bàn giao, muốn biết task nào chưa được test và lý do chờ để tránh bỏ sót | UA, Creative | Task `waiting` chưa được phân biệt giữa chờ chủ động và quá hạn | **Đậu Hoàng Minh hỏi Linh** liệu problem đã có công cụ sẵn có giải quyết chưa (chưa xác nhận câu hỏi nhắm chính xác card nào) |
+| 1 | Nguyễn Xuân Khánh Linh | Khi creative đã bàn giao, muốn biết task nào chưa được test và lý do chờ để tránh bỏ sót | UA, Creative | Task `waiting` chưa được phân biệt giữa chờ chủ động và quá hạn | **Đậu Hoàng Minh hỏi** liệu problem đã có công cụ sẵn có giải quyết chưa (chưa xác nhận câu hỏi nhắm chính xác card nào) |
 | 2 | Nguyễn Xuân Khánh Linh | Khi thiết lập ads scenario, muốn giảm thao tác gán remote key lặp lại giữa nhiều game | Monetization | Lặp lại thao tác cấu hình và kiểm tra key/value | Chưa có câu hỏi được xác nhận |
 | 3 | Nguyễn Xuân Khánh Linh | Khi chấm IELTS Writing, muốn có câu sửa phù hợp comment và phong cách sửa của giáo viên | Giáo viên IELTS | Giáo viên tự diễn đạt câu sửa mẫu cho từng nhận xét | Chưa có câu hỏi được xác nhận |
 | 4 | Đậu Hoàng Minh | Khi kết thúc cuộc họp, muốn có quyết định, action item, owner và deadline rõ ràng | Người chủ trì và thành viên nhóm | Lọc action item từ ghi chú và viết biên bản thủ công | Được hỏi: “Công ty có cho ghi âm họp không?” (chưa rõ người hỏi) |
@@ -34,8 +32,6 @@
 | 10 | Lê Thế Anh | Khi xảy ra sự cố thú cưng, muốn xác minh nhanh để BQL xử lý | BQL, an ninh, cư dân | Chưa rõ độ trễ phát hiện và công sức xác minh CCTV | Có chuẩn bị câu hỏi về nhận diện sai và khác biệt nội quy giữa tòa nhà; chưa xác nhận đã được hỏi trực tiếp |
 | 11 | Lê Thế Anh | Khi căn tin đông, muốn biết thời gian chờ/suất còn lại để chủ động ăn trưa | Học viên, căn tin | Xếp hàng khoảng 15–20 phút theo trải nghiệm cá nhân | Chưa có câu hỏi được xác nhận |
 | 12 | Lê Thế Anh | Khi đi xe buýt cao điểm, muốn biết xe đến có còn đón khách được không | Hành khách | Chỉ biết xe đã đầy khi đến trạm; có lần phải đợi thêm khoảng 20 phút | Chưa có câu hỏi được xác nhận |
-
-**Các câu hỏi phản biện khác có ghi nhận trong bài cá nhân:** Khánh Linh từng hỏi về một candidate “Ứng dụng này chỉ sửa UI/UX à bạn?” và một candidate khác “Ứng dụng này khác gì dùng ChatGPT để sửa CV?”. Chưa có đủ thông tin để gắn hai câu hỏi này vào chính xác người nhận/candidate ở bảng trên. Minh phản biện Linh về việc giải pháp tương tự đã tồn tại trên thị trường. Không biến câu hỏi chuẩn bị để pitch thành câu hỏi đã được người khác thực sự hỏi.
 
 **Nhận xét từ thảo luận:** Minh ghi rằng card tóm tắt sau họp bị loại khỏi shortlist cuối vì đã có nhiều công cụ tương tự; Linh ghi mình lập bảng tiêu chí để giúp nhóm chọn; Thế Anh và Thu có candidate cùng domain thú cưng. Hai candidate thú cưng ở #7 và #10 được gộp thành một hướng bài toán khi hội tụ.
 
@@ -107,46 +103,116 @@ Thang điểm 1–5: Quan trọng = mức độ ảnh hưởng đến quyết đ
 
 **Ưu tiên kiểm:** (1) có pain thực, (2) phát hiện chậm là bottleneck, (3) camera có quan sát được hành vi, và (4) dữ liệu/video được sử dụng hợp lệ.
 
+3.2. Kiểm chứng
+Trạng thái được nhóm cập nhật: Đại diện nhóm xác nhận đã thực hiện khảo sát với 8 phiếu trả lời và số liệu tổng hợp trùng với bảng kết quả phía dưới. Chưa có phỏng vấn có cấu trúc với BQL/an ninh. Trợ lý chưa được xem biểu mẫu hoặc dữ liệu trả lời gốc; ngày khảo sát, đối tượng trả lời và phương pháp tuyển mẫu cần nhóm điền từ hồ sơ thực tế trước khi nộp. Kết quả khảo sát được ghi nhận theo thông tin nhóm cung cấp, không phải dữ liệu do trợ lý tự kiểm chứng.
+
+Thông tin phương pháp cần bổ sung từ hồ sơ khảo sát:
+Trường	Thông tin
+Số phiếu hợp lệ	8 (theo xác nhận của nhóm)
+Ngày / khoảng thời gian thực hiện	[Nhóm điền từ khảo sát thật]
+Hình thức thu thập (Form, hỏi trực tiếp, ...)	[Nhóm điền]
+Đối tượng và cách chọn người trả lời	[Nhóm điền] — không mặc định cả 8 người đều là cư dân nếu chưa đối chiếu
+Minh chứng (liên kết Form/Sheets hoặc bản tổng hợp ẩn danh)	[Nhóm bổ sung đường dẫn hoặc tên tệp]
+Phỏng vấn BQL/an ninh	Chưa thực hiện
+
+
+Bộ câu hỏi dùng để đối chiếu với form gốc (đây là khung câu hỏi đã chuẩn bị trong báo cáo, chưa xác nhận là nguyên văn câu hỏi nhóm thực tế đã sử dụng):
+1. Trong 3 tháng gần đây, bạn đã trực tiếp chứng kiến tình huống nào tại khu vực chung? (Có thể chọn nhiều: thú cưng phóng uế; chó không đeo rọ mõm ở nơi bắt buộc; thú cưng tấn công/gây thương tích; chưa chứng kiến.)
+2. Bạn đã từng gửi phản ánh về sự cố thú cưng cho an ninh/BQL chưa? (Có / Chưa.)
+3. Bạn đánh giá cảnh báo CCTV có người xác minh là hữu ích ở mức nào? (Hữu ích / Chưa chắc / Không hữu ích.)
+4. Bạn có lo ngại về quyền riêng tư khi CCTV phân tích sự cố không? (Có / Không.)
+5. Điều gì khiến bạn tin tưởng hoặc không tin tưởng cảnh báo? (Câu trả lời mở; chưa có dữ liệu gốc để trích dẫn.)
+Bảng kết quả khảo sát do nhóm xác nhận (n = 8):
+Nội dung	Số phiếu theo nhóm cung cấp	Tỷ lệ / 8 phiếu	Diễn giải
+Chứng kiến thú cưng phóng uế	5	62,5%	Các loại sự cố có thể xuất hiện ở cùng một phiếu
+Chứng kiến chó không rọ mõm ở khu vực bắt buộc	4	50%	Cần đối chiếu điều kiện nội quy tại nơi ghi nhận
+Chứng kiến hành vi tấn công/gây thương tích	1	12,5%	Mẫu rất nhỏ, không suy ra tần suất toàn chung cư
+Chưa chứng kiến tình huống nào nêu trên	1	12,5%	Cần kiểm tra tính nhất quán với câu trả lời còn lại
+Từng gửi phản ánh cho an ninh/BQL	3	37,5%	Không đo được tốc độ phản hồi của BQL
+Đánh giá cảnh báo có người xác minh là hữu ích	6	75%	Thể hiện cảm nhận, không chứng minh hiệu quả thực tế
+Có lo ngại về quyền riêng tư	7	87,5%	Cần làm rõ điều kiện chấp nhận dùng CCTV phân tích
+
+
+Phân tích thận trọng: Trong 8 phiếu mà nhóm báo đã thu, một số người ghi nhận tình huống liên quan thú cưng và phần lớn bày tỏ lo ngại về quyền riêng tư. Đây là tín hiệu để nhóm tiếp tục kiểm chứng nhu cầu cảnh báo và điều kiện sử dụng, nhưng không đủ để khẳng định mức độ phổ biến trong cộng đồng cư dân, thời gian phát hiện sự cố thực tế, hiệu quả với ban quản lý hoặc độ chính xác của Computer Vision. Chưa có đo lường baseline vận hành.
+
+Interview snapshot — trạng thái hiện tại:
+Trường	Nội dung
+Người được hỏi (vai trò, không ghi tên thật)	Chưa có phỏng vấn BQL/an ninh có cấu trúc
+Câu nói nguyên văn	Chưa thu thập
+Lần gần nhất gặp vấn đề	Cần hỏi BQL/an ninh để xác định
+Cách đang xử lý (workaround)	Chưa xác minh trực tiếp
+Mất bao lâu, bao lần	Chưa có baseline
+Insight / opportunity	Cần kiểm chứng bottleneck phát hiện chậm và khả năng xử lý cảnh báo
+
+
+Tổng hợp nguồn bằng chứng:
+Nguồn	Quy mô	Tín hiệu ủng hộ	Giới hạn / phản chứng
+Khảo sát của nhóm (theo xác nhận, chờ đối chiếu bản gốc)	8 phiếu	5/8 ghi nhận phóng uế; 6/8 đánh giá cảnh báo có người xác minh hữu ích	7/8 lo ngại quyền riêng tư; chưa rõ cách chọn mẫu; chưa đo tốc độ xử lý
+Phỏng vấn BQL/an ninh có cấu trúc	0	Chưa có	Chưa xác nhận nhu cầu và workflow từ actor vận hành
+Lời kể một cư dân do Thế Anh cung cấp	1 lời kể, ngoài bảng khảo sát	Có phản ánh các tình huống liên quan thú cưng	Không có mốc đo, không xác minh được quy trình BQL
+Log phản ánh / dữ liệu CCTV	Chưa tiếp cận	Chưa có	Chưa biết tần suất và detection latency
+Research công nghệ	3 công cụ/tài liệu	Có công nghệ phát hiện đối tượng, điều kiện vùng và cảnh báo	Chưa chứng minh phát hiện ba loại hành vi trên video thực tế
+
 ### 3.2. Kiểm chứng
 
-**Trạng thái hiện tại (nhóm xác nhận):** **Chưa thực hiện phỏng vấn hay khảo sát** (0 phỏng vấn, 0 khảo sát). Thế Anh có nêu lời kể từ **một cư dân cùng tòa nhà** về việc nuôi thú cưng trái nội quy, tiếng sủa, phóng uế và đưa thú cưng vào khu vực chung. Đây là **tín hiệu định tính ban đầu**, không phải interview snapshot chuẩn, không chứng minh tần suất hoặc mức độ chậm phát hiện. Không được ghi kế hoạch hoặc lời kể gián tiếp thành kết quả phỏng vấn/khảo sát đã hoàn thành.
+**Trạng thái được nhóm cập nhật:** Đại diện nhóm xác nhận **đã thực hiện khảo sát với 8 phiếu trả lời** và số liệu tổng hợp trùng với bảng kết quả phía dưới. **Chưa có phỏng vấn có cấu trúc** với BQL/an ninh. Trợ lý chưa được xem biểu mẫu hoặc dữ liệu trả lời gốc; ngày khảo sát, đối tượng trả lời và phương pháp tuyển mẫu **cần nhóm điền từ hồ sơ thực tế** trước khi nộp. Kết quả khảo sát được ghi nhận theo thông tin nhóm cung cấp, **không phải dữ liệu do trợ lý tự kiểm chứng**.
 
-**Cách dự kiến thực hiện:** Phỏng vấn 2–3 người (BQL, nhân viên an ninh, cư dân có trải nghiệm liên quan), hoặc khảo sát nhanh 5–10 người; ưu tiên thu thập log sự cố và dữ liệu thời gian xử lý được chia sẻ hợp lệ.
+**Thông tin phương pháp cần bổ sung từ hồ sơ khảo sát:**
 
-**Các câu hỏi theo The Mom Test:**
+| Trường | Thông tin |
+|---|---|
+| Số phiếu hợp lệ | **8** |
+| Ngày / khoảng thời gian thực hiện | 18h 9/11 đến 9h 10/11 |
+| Hình thức thu thập (Form, hỏi trực tiếp, ...) | Google Forms |
+| Đối tượng và cách chọn người trả lời | Cư dân của các chung cư cho phép nuôi chó|
+| Phỏng vấn BQL/an ninh | **Chưa thực hiện** |
 
-1. Lần gần nhất anh/chị tiếp nhận hoặc chứng kiến sự cố phóng uế, không rọ mõm hay gây thương tích là khi nào? Diễn biến ra sao?
-2. Ai phát hiện đầu tiên, bằng cách nào và sau bao lâu thì an ninh/BQL biết?
-3. Nhân viên thực hiện những bước nào từ lúc nhận biết đến khi xử lý? Bước nào tốn thời gian nhất?
-4. Có sự cố nào bị bỏ sót hoặc chỉ biết sau khi cư dân phản ánh? Hậu quả là gì?
-5. Camera có nhìn rõ được khu vực và hành vi liên quan không? Trường hợp nào không nhìn thấy?
-6. Có hệ thống cảnh báo sẵn có không? Nếu có, hiệu quả và hạn chế thế nào?
-7. Ca trực có thể xử lý bao nhiêu cảnh báo bổ sung mà không ảnh hưởng công việc khác?
-8. Quy trình phân quyền, lưu trữ và sử dụng video hiện nay như thế nào?
+**Bộ câu hỏi dùng để đối chiếu với form gốc** (đây là khung câu hỏi đã chuẩn bị trong báo cáo):
 
-**Interview snapshot — mẫu chờ điền:**
+1. Trong 3 tháng gần đây, bạn đã trực tiếp chứng kiến tình huống nào tại khu vực chung? (Có thể chọn nhiều: thú cưng phóng uế; chó không đeo rọ mõm ở nơi bắt buộc; thú cưng tấn công/gây thương tích; chưa chứng kiến.)
+2. Bạn đã từng gửi phản ánh về sự cố thú cưng cho an ninh/BQL chưa? (Có / Chưa.)
+3. Bạn đánh giá cảnh báo CCTV có người xác minh là hữu ích ở mức nào? (Hữu ích / Chưa chắc / Không hữu ích.)
+4. Bạn có lo ngại về quyền riêng tư khi CCTV phân tích sự cố không? (Có / Không.)
+5. Điều gì khiến bạn tin tưởng hoặc không tin tưởng cảnh báo? (Câu trả lời mở; **chưa có dữ liệu gốc để trích dẫn**.)
+
+**Bảng kết quả khảo sát do nhóm xác nhận (n = 8):**
+
+| Nội dung | Số phiếu theo nhóm cung cấp | Tỷ lệ / 8 phiếu | Diễn giải |
+|---|---:|---:|---|
+| Chứng kiến thú cưng phóng uế | 5 | 62,5% | Các loại sự cố có thể xuất hiện ở cùng một phiếu |
+| Chứng kiến chó không rọ mõm ở khu vực bắt buộc | 4 | 50% | Cần đối chiếu điều kiện nội quy tại nơi ghi nhận |
+| Chứng kiến hành vi tấn công/gây thương tích | 1 | 12,5% | Mẫu rất nhỏ, không suy ra tần suất toàn chung cư |
+| Chưa chứng kiến tình huống nào nêu trên | 1 | 12,5% | Cần kiểm tra tính nhất quán với câu trả lời còn lại |
+| Từng gửi phản ánh cho an ninh/BQL | 3 | 37,5% | Không đo được tốc độ phản hồi của BQL |
+| Đánh giá cảnh báo có người xác minh là hữu ích | 6 | 75% | Thể hiện cảm nhận, không chứng minh hiệu quả thực tế |
+| Có lo ngại về quyền riêng tư | 7 | 87,5% | Cần làm rõ điều kiện chấp nhận dùng CCTV phân tích |
+
+**Phân tích thận trọng:** Trong 8 phiếu mà nhóm báo đã thu, một số người ghi nhận tình huống liên quan thú cưng và phần lớn bày tỏ lo ngại về quyền riêng tư. Đây là tín hiệu để nhóm **tiếp tục kiểm chứng** nhu cầu cảnh báo và điều kiện sử dụng, nhưng **không đủ** để khẳng định mức độ phổ biến trong cộng đồng cư dân, thời gian phát hiện sự cố thực tế, hiệu quả với ban quản lý hoặc độ chính xác của Computer Vision. Chưa có đo lường baseline vận hành.
+
+**Interview snapshot — trạng thái hiện tại:**
 
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | Chưa phỏng vấn |
-| Câu nói đáng nhớ nhất (nguyên văn) | Chưa có |
-| Lần gần nhất gặp vấn đề: chuyện gì đã xảy ra? | Chưa có |
-| Hiện đang xử lý bằng cách nào (workaround)? | Chưa xác minh |
-| Mất bao lâu, bao lần? | Chưa có baseline |
-| Insight / opportunity rút ra | Chờ bằng chứng thực tế |
+| Người được hỏi (vai trò, không ghi tên thật) | Chưa có phỏng vấn BQL/an ninh có cấu trúc |
+| Câu nói nguyên văn | Chưa thu thập |
+| Lần gần nhất gặp vấn đề | Cần hỏi BQL/an ninh để xác định |
+| Cách đang xử lý (workaround) | Chưa xác minh trực tiếp |
+| Mất bao lâu, bao lần | Chưa có baseline |
+| Insight / opportunity | Cần kiểm chứng bottleneck phát hiện chậm và khả năng xử lý cảnh báo |
 
-**Tổng hợp:**
+**Tổng hợp nguồn bằng chứng:**
 
-| Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
+| Nguồn | Quy mô | Tín hiệu ủng hộ | Giới hạn / phản chứng |
 |---|---:|---|---|
-| Phỏng vấn có cấu trúc BQL/an ninh/cư dân | 0; mục tiêu 2–3 | Chưa thu thập | Chưa thu thập |
-| Lời kể cư dân do Thế Anh cung cấp | 1 lời kể, không phải interview chuẩn | Có phản ánh việc nuôi thú cưng trái nội quy, gây ồn, phóng uế ở khu vực chung | Chưa chứng minh tần suất, thời gian phát hiện, chất lượng CCTV hoặc quy trình BQL |
-| Survey (nếu thực hiện) | 0; mục tiêu 5–10 | Chưa thu thập | Chưa thu thập |
-| Log phản ánh/sự cố | Chưa tiếp cận | Chưa có số vụ hay độ trễ phát hiện | Chưa biết sự cố có hiếm hoặc đã xử lý kịp không |
-| Research công nghệ | 3 tài liệu/công cụ | Có khả năng nhận diện đối tượng, cấu hình vùng và tạo cảnh báo | Chưa chứng minh nhận diện chính xác ba loại sự kiện trên CCTV thực tế |
+| Khảo sát của nhóm | 8 phiếu | 5/8 ghi nhận phóng uế; 6/8 đánh giá cảnh báo có người xác minh hữu ích | 7/8 lo ngại quyền riêng tư; chưa rõ cách chọn mẫu; chưa đo tốc độ xử lý |
+| Phỏng vấn BQL/an ninh có cấu trúc | 0 | Chưa có | Chưa xác nhận nhu cầu và workflow từ actor vận hành |
+| Lời kể một cư dân do Thế Anh cung cấp | 1 lời kể, ngoài bảng khảo sát | Có phản ánh các tình huống liên quan thú cưng | Không có mốc đo, không xác minh được quy trình BQL |
+| Log phản ánh / dữ liệu CCTV | Chưa tiếp cận | Chưa có | Chưa biết tần suất và detection latency |
+| Research công nghệ | 3 công cụ/tài liệu | Có công nghệ phát hiện đối tượng, điều kiện vùng và cảnh báo | Chưa chứng minh phát hiện ba loại hành vi trên video thực tế |
 
-**Nhóm đã sửa problem thế nào:** Từ hướng ban đầu bao gồm cả thất lạc, truy vết thú cưng và tìm căn hộ, nhóm chủ động thu hẹp thành **phát hiện sớm ba loại sự kiện nghi vấn và gửi cảnh báo cho con người xác minh**. Đây là thay đổi phạm vi dựa trên phân tích và research, **chưa phải kết quả của phỏng vấn đã hoàn tất**. Sau validation, nhóm có thể còn phải giảm số loại sự kiện hoặc thay đổi bottleneck ưu tiên.
+**Nhóm đã sửa problem thế nào:** Nhóm chuyển từ đề xuất phát hiện, truy vết thú cưng và xác định căn hộ sang **phát hiện sớm dấu hiệu của ba sự kiện nghi vấn, cảnh báo kèm bằng chứng để nhân viên xác minh**. Khảo sát nhóm báo cáo bổ sung tín hiệu về sự kiện được quan sát, mức độ quan tâm và rủi ro quyền riêng tư. Tuy nhiên, **chưa thể quy việc thay đổi phạm vi là kết quả trực tiếp của khảo sát** nếu nhóm chưa có biên bản thứ tự ra quyết định; việc thu hẹp chủ yếu được giải thích bằng phân tích scope, research và rủi ro quy kết sai. Bước kế tiếp là đối chiếu phiếu khảo sát gốc và phỏng vấn BQL/an ninh về bottleneck vận hành.
 
+Nhóm đã sửa problem thế nào: Nhóm chuyển từ đề xuất phát hiện, truy vết thú cưng và xác định căn hộ sang phát hiện sớm dấu hiệu của ba sự kiện nghi vấn, cảnh báo kèm bằng chứng để nhân viên xác minh. Khảo sát nhóm báo cáo bổ sung tín hiệu về sự kiện được quan sát, mức độ quan tâm và rủi ro quyền riêng tư. Tuy nhiên, chưa thể quy việc thay đổi phạm vi là kết quả trực tiếp của khảo sát nếu nhóm chưa có biên bản thứ tự ra quyết định; việc thu hẹp chủ yếu được giải thích bằng phân tích scope, research và rủi ro quy kết sai. Bước kế tiếp là đối chiếu phiếu khảo sát gốc và phỏng vấn BQL/an ninh về bottleneck vận hành.
 ### 3.3. Research giải pháp đã có
 
 *Đặng Minh Thu phụ trách phần research công nghệ; Nguyễn Xuân Khánh Linh hỗ trợ Assumption Map, đối chiếu khả năng công nghệ và điều chỉnh problem; Đậu Hoàng Minh tham khảo research để xây slide. Đối chiếu [báo cáo cá nhân của Thu](../individual/2A202604009_DangMinhThu.md) trước khi nộp.*
