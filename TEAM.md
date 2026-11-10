@@ -14,11 +14,11 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | Đậu Hoàng Minh | 2A202604011 | Nhóm trưởng; thiết kế slide; phụ trách CP6 — mức can thiệp AI | `justapea25` |
-| 2 | Nguyễn Xuân Khánh Linh | 2A202603801 | Điều phối thảo luận CP3–CP4; lập bảng tiêu chí chọn candidate; Assumption Map và hỗ trợ research | 'linkiewinkie' |
-| 3 | Đặng Minh Thu | 2A202604009 | Research công nghệ; phân tích quy trình trước/sau (CP5) | 'minhthu27' |
-| 4 | Lê Thế Anh | 2A202603983 | Đề xuất bài toán thú cưng; Problem Statement v1, tiêu chí đánh giá và quyết định CP6 | f412626284@outlook.com |
+| 2 | Nguyễn Xuân Khánh Linh | 2A202603801 | Điều phối thảo luận CP3–CP4; lập bảng tiêu chí chọn candidate; Assumption Map và hỗ trợ research | `linkiewinkie` |
+| 3 | Đặng Minh Thu | 2A202604009 | Research công nghệ; phân tích quy trình trước/sau (CP5) | `minhthu27` |
+| 4 | Lê Thế Anh | 2A202603983 | Đề xuất bài toán thú cưng; Problem Statement v1, tiêu chí đánh giá và quyết định CP6 | `LETHESHIYING` |
 
-*Không công khai email/số điện thoại trong bảng này. Vai trò phản ánh đóng góp được mô tả trong tài liệu hiện có; nhóm cần xác nhận nếu có thay đổi phân công.*
+*Không công khai email/số điện thoại trong bảng này.*
 
 ## Phân công theo checkpoint
 
@@ -28,7 +28,7 @@
 | CP4 — Kiểm chứng | Nguyễn Xuân Khánh Linh | Lê Thế Anh (cung cấp phản ánh cư dân) | Assumption Map, câu hỏi phỏng vấn, snapshot / survey khi có dữ liệu |
 | CP4 — Research | Đặng Minh Thu | Nguyễn Xuân Khánh Linh; Đậu Hoàng Minh rà nội dung thuyết trình | Bảng research Frigate, AXIS, NVIDIA có nguồn và khoảng trống |
 | CP5 — Quy trình trước/sau | Đặng Minh Thu | Đậu Hoàng Minh (slide quy trình) | Workflow As-Is/To-Be và so sánh before/after |
-| CP5 — Problem Statement v0 | Đăng Minh Thu | Đặng Minh Thu; Lê Thế Anh | Problem Statement v0 |
+| CP5 — Problem Statement v0 | Đặng Minh Thu | Đặng Minh Thu; Lê Thế Anh | Problem Statement v0 |
 | CP6 — Mức can thiệp + Problem Statement v1 | Đậu Hoàng Minh | Lê Thế Anh | Ma trận, AI Canvas, PAIR, evaluation, Problem Statement v1 |
 | CP6 — Quyết định | Lê Thế Anh | Đậu Hoàng Minh | Bốn rủi ro + Go / Not Yet / No-Go |
 
@@ -47,15 +47,15 @@
 
 - Ở giai đoạn chọn đề tài: pitch card tổng hợp sau cuộc họp, phản biện card của các bạn khác.
 - Đề xuất tách bài toán truy vết sự cố thú cưng thành 3 bước: (1) phát hiện sự kiện, (2) xác nhận thú cưng, (3) truy vết căn hộ, thay vì cho AI nhận diện thẳng căn hộ từ video. Nhờ đó nhóm thấy bottleneck có thể nằm ở bước tìm đoạn video và cần thu hẹp phạm vi AI.
-- Viết mục 6: xếp bài vào ô “độ mơ hồ thấp × độ phức tạp cao”, lập luận vì sao No AI và Rule chưa đủ, vì sao không cần Agent, và chọn Workflow. Hoàn thành AI Canvas và phân tích báo nhầm/bỏ sót theo từng bước.
+- Viết bản đầu mục 6: ma trận độ mơ hồ × độ phức tạp, lập luận vì sao No AI và Rule chưa đủ, vì sao không cần Agent, và chọn Workflow; AI Canvas và phân tích báo nhầm/bỏ sót. Bản cuối được nhóm điều chỉnh theo phạm vi phát hiện và cảnh báo sớm.
 - Viết mục 9: liệt kê hạn chế về bằng chứng, dữ liệu camera, quyền riêng tư, phạm vi giải pháp, đề xuất hướng tiếp theo.
 - Làm slide pitch 7 trang cho bài thuyết trình.
 
 **Bằng chứng:**
 
-- Mục 6 và Mục 9 trong file `report/team/group_report.md` (đã có điều chỉnh theo phương án cuối).
-- File `report/assets/cp5-workflow-current.png` nếu nhóm đã đưa ảnh lên repo (quy trình hiện tại từ slide pitch).
-- Commit `77c2f95712f4ea86e5b8e01c0403c0f3204b438e` thêm mục 6, mục 9 vào báo cáo nhóm (theo thông tin Minh cung cấp).
+- Mục 6 và Mục 9 trong file `report/team/group_report.md`.
+- File `report/assets/cp5-workflow-current.png` (quy trình hiện tại trong slide pitch).
+- Commit `77c2f95` (thêm mục 6, mục 9), `aa3677e` (gộp báo cáo của các thành viên).
 - [Báo cáo cá nhân](report/individual/2A202604011_DauHoangMinh.md).
 
 **Điều mình học được từ phần nhóm:**
@@ -113,27 +113,30 @@ Việc chọn vấn đề cần dựa vào actor, quy trình và bằng chứng 
 
 Cần phân biệt object detection với action/event detection và kiểm tra rủi ro khi AI kết luận sai. Công nghệ sẵn có có thể làm phần nền tảng, nhưng chất lượng dữ liệu và bước xác minh của con người vẫn quyết định giải pháp có hữu ích trong vận hành thực tế hay không.
 
-### Lê Thế Anh - 2A202603983
-
+### LeTheAnh-2A202603983
 **Phần việc phụ trách:**
-
-- Đề xuất bài toán thú cưng và bổ sung tín hiệu ban đầu từ lời kể cư dân.
-- Phụ trách nội dung Problem Statement v1, tiêu chí đánh giá và phần quyết định CP6.
-
-**Đóng góp cụ thể:**
-
-- Đưa vào CP1 tình huống cư dân phản ánh nuôi thú cưng trái nội quy, gây ồn, phóng uế khu vực chung.
-- Chuẩn bị Problem Card về sự cố thú cưng, đồng thời so sánh với các vấn đề căn tin VinUni và xe buýt đông khách.
-- Viết bản nháp `Problem Statement v1` (actor, workflow, bottleneck, impact, metric, boundary), bộ năm tiêu chí eval và đề xuất Human-in-the-loop.
-- Chuẩn bị phần bốn rủi ro Value, Usability, Feasibility, Viability và phương án **Not Yet** cho triển khai rộng, **Go có điều kiện** cho pilot nhỏ.
-- Nhận diện sự khác biệt giữa phát hiện đối tượng và xác định vi phạm; lưu ý việc suy ra căn hộ từ CCTV là rủi ro. Những nội dung theo dõi liên camera trong bản nháp cũ không nằm trong phạm vi cuối cùng.
-
-**Bằng chứng:**
-
-- [Báo cáo cá nhân của Thế Anh](report/individual/2A202603983_LeTheAnh.md).
-- Mục 7–8 trong [`group_report.md`](report/team/group_report.md) (đã chỉnh về phát hiện/cảnh báo).
-- Nội dung CP6 được Thế Anh mô tả đã chuẩn bị trên nhánh `theanh`; nhóm cần kiểm tra commit cụ thể khi hợp nhất.
+- CP6 — Xây dựng Problem Statement v1 và các tiêu chí đánh giá (mục 7 của báo cáo nhóm).
+- CP6 — Phân tích rủi ro và đề xuất quyết định Go / Not Yet / No-Go (mục 8 của báo cáo nhóm).
+- Thuyết trình đại diện nhóm MALTO trong buổi lab.
+**Đóng góp cụ thể (mình đã làm gì, ra sản phẩm gì):**
+- Tham gia xây dựng Problem Statement v1 cho bài toán quản lý và xác minh sự cố liên quan đến thú cưng tại khu chung cư.
+- Phân tích Actor, quy trình hiện tại, bottleneck, impact, success metric và boundary của giải pháp.
+- Làm rõ vai trò hỗ trợ của Computer Vision và trách nhiệm kiểm tra, xác minh của nhân viên an ninh trước khi thực hiện hành động.
+- Xây dựng các tiêu chí đánh giá hiệu quả giải pháp, bao gồm chất lượng nhận diện, mức độ bỏ sót hoặc cảnh báo sai, và khả năng vận hành.
+- Phân tích bốn nhóm rủi ro: Value, Usability, Feasibility và Viability.
+- Đề xuất quyết định Not Yet đối với triển khai toàn diện, đồng thời xem xét thử nghiệm pilot giới hạn trước khi mở rộng.
+- Đảm nhận nhiệm vụ thuyết trình, đại diện nhóm MALTO trình bày kết quả làm việc trong buổi lab.
+**Bằng chứng (phần nào trong group_report.md, file nào trong report/assets/, commit nào):**
+- report/team/group_report.md — mục 7: Problem Statement v1 và tiêu chí đánh giá.
+- report/team/group_report.md — mục 8: Phân tích rủi ro và quyết định cuối.
+- Vai trò thuyết trình trong buổi lab: có thể đối chiếu với các thành viên nhóm hoặc Lab Coach.
+- Git commit: `3e16865`, `dd4d254` (thêm mục 7–8 vào báo cáo nhóm), `04ac42e` (báo cáo cá nhân).
 
 **Điều mình học được từ phần nhóm:**
 
-Một vấn đề có thể ảnh hưởng tới cư dân nhưng phải chứng minh tần suất, bottleneck và thời gian xử lý bằng dữ liệu thay vì giả định. Khi thiết kế ứng dụng AI từ CCTV cần giới hạn phạm vi, có con người xác minh và không để hệ thống tự quy kết trách nhiệm.
+**Về AI và hiệu suất làm việc:** Qua buổi lab, mình nhận thấy AI thực sự rất quan trọng khi phải xử lý nhiều nhiệm vụ trong thời gian ngắn. AI có thể hỗ trợ tổng hợp thông tin, phân tích vấn đề, xây dựng cấu trúc báo cáo và phản biện ý tưởng với tốc độ rất nhanh. Tuy nhiên, tốc độ suy nghĩ, thảo luận và ra quyết định của con người không phải lúc nào cũng theo kịp tốc độ xử lý của AI. Điều này khiến mình nhận ra rằng sử dụng AI hiệu quả không chỉ phụ thuộc vào công cụ, mà còn phụ thuộc vào khả năng phối hợp và tổ chức công việc của cả nhóm.
+**Về teamwork và điều phối thảo luận:** Mình nhận thấy việc tạo không khí thảo luận tích cực, khuyến khích các thành viên tham gia và phân chia nhiệm vụ phù hợp với thế mạnh của từng người là rất quan trọng. Đặc biệt trong một buổi lab có nhiều checkpoint và thời gian giới hạn, người điều phối cần giúp nhóm tập trung vào các quyết định quan trọng, tránh dành quá nhiều thời gian cho những vấn đề nhỏ. Khả năng kết nối các thành viên và tạo sự thoải mái khi trao đổi cũng ảnh hưởng trực tiếp đến hiệu quả làm việc nhóm.
+**Về khả năng giao tiếp bằng tiếng Việt:** Mặc dù mình có nền tảng tiếng Trung và tiếng Anh tương đối tốt, buổi lab khiến mình nhận ra rằng những lợi thế này không thể bù đắp hoàn toàn cho hạn chế về tiếng Việt, đặc biệt khi cần thảo luận nhanh, trình bày ý tưởng và diễn đạt các khái niệm chuyên môn. Vì vậy, mình đặt mục tiêu trong hai tuần tới sẽ tăng cường đọc tài liệu tiếng Việt, đặc biệt là các nội dung về AI, công nghệ và quản lý sản phẩm, đồng thời luyện cách diễn đạt và thuyết trình để cải thiện khả năng giao tiếp trong môi trường học tập và làm việc nhóm.
+**Về kiến thức AI cần bổ sung:** Mình đã có một số nền tảng về phân tích nghiệp vụ (Business Analysis), xác định vấn đề và xây dựng quy trình, nhưng nhận thấy bản thân vẫn còn thiếu kiến thức chuyên sâu về cách đánh giá chất lượng hệ thống AI. Những nội dung mình cần tiếp tục học bao gồm Precision, Recall, False Positive, False Negative, cách thiết kế bộ dữ liệu đánh giá (evaluation dataset), cách xác định baseline và target, cũng như cách đánh giá hiệu quả thực tế của AI sau khi đưa vào quy trình vận hành.
+**Về việc lựa chọn giải pháp AI:** Một vấn đề mà mình muốn hiểu sâu hơn là khi nào nên sử dụng Rule-based System, Workflow có AI hỗ trợ hoặc AI Agent. Mình cần học cách đánh giá liệu AI có thực sự tạo ra giá trị vượt trội so với một quy trình đơn giản hơn hay không, đồng thời hiểu rõ các rủi ro khi AI đưa ra kết quả sai và vai trò của con người trong quá trình kiểm tra, xác minh.
+**Định hướng cải thiện:** Trong những buổi lab tiếp theo, mình muốn cải thiện đồng thời ba năng lực: kiến thức kỹ thuật AI và phương pháp đánh giá hệ thống, khả năng tổ chức thảo luận nhóm, và khả năng sử dụng tiếng Việt trong môi trường chuyên môn. Mục tiêu không chỉ là hoàn thành các checkpoint đúng thời hạn mà còn thực sự hiểu được những quyết định kỹ thuật và sản phẩm mà nhóm đưa ra.
