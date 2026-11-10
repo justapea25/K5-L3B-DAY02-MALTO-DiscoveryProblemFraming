@@ -16,21 +16,19 @@
 
 ## 2. Scan problem (CP1)
 
-Lăng kính: **Tốn thời gian · Cần đọc, tổng hợp nhiều thông tin · Lặp lại · Khó ra quyết định.**
+Lăng kính: **Tốn thời gian · Cần đọc, tổng hợp nhiều thông tin · Lặp lại**
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | Tốn thời gian | Khi tôi nhận được nhiều yêu cầu từ nhiều kênh (email, chat, ticket, form) trong cùng một ngày, tôi muốn nhanh chóng hiểu nội dung, mức độ ưu tiên và người/đơn vị phù hợp để xử lý, để phản hồi đúng thời hạn và tránh bỏ sót công việc quan trọng. | Nhân viên tiếp nhận yêu cầu, trưởng nhóm, bộ phận xử lý | Phải kiểm tra nhiều kênh, đọc từng yêu cầu và tự xác định mức độ ưu tiên, người phụ trách. |
-| 2 | Tốn thời gian| Khi phải kiểm tra nhiều hồ sơ đăng ký học bổng hoặc tuyển dụng, tôi muốn nhanh chóng đối chiếu thông tin và phát hiện giấy tờ còn thiếu, để giảm thời gian kiểm tra và hạn chế sai sót trước khi xét duyệt. | Bộ phận tuyển dụng, xét duyệt học bổng, ứng viên | Phải kiểm tra từng giấy tờ và đối chiếu với nhiều tiêu chí khác nhau. |
-| 3 | Cần đọc, tổng hợp nhiều thông tin | Khi tìm hiểu một lĩnh vực mới để thực hiện công việc hoặc nghiên cứu, tôi muốn nhanh chóng tổng hợp các nguồn tài liệu đáng tin cậy và xác định những kiến thức quan trọng, để không mất quá nhiều thời gian tìm kiếm và chọn lọc thông tin. | Nhân viên nghiên cứu, chuyên viên phân tích, sinh viên | Thông tin phân tán trên nhiều nguồn, khó đánh giá độ tin cậy và xác định nội dung cần đọc trước. |
-| 4 | Tốn thời gian| Khi phải nhập dữ liệu từ hóa đơn, chứng từ hoặc biểu mẫu vào hệ thống, tôi muốn tự động trích xuất và điền các trường thông tin tương ứng, để giảm thao tác thủ công và hạn chế lỗi nhập liệu. | Nhân viên kế toán, hành chính, vận hành | Phải đọc và nhập lại nhiều trường dữ liệu từ các tài liệu có định dạng khác nhau. |
-| 5 | Khó ra quyết định| Khi phải lựa chọn nhà cung cấp cho một nhu cầu cụ thể, tôi muốn so sánh các báo giá theo chi phí, chất lượng và điều kiện dịch vụ, để lựa chọn phương án phù hợp mà không phải đối chiếu thủ công từng tài liệu. | Nhân viên mua hàng, quản lý, doanh nghiệp | Báo giá có cấu trúc và điều kiện khác nhau, khó so sánh trực tiếp giữa nhiều nhà cung cấp. |
+| 1 | Tốn thời gian | Khi tôi nhận được nhiều yêu cầu từ nhiều kênh (email, chat, ticket, form) trong cùng một ngày, tôi muốn nhanh chóng hiểu nội dung, mức độ ưu tiên và người/đơn vị phù hợp để xử lý, để phản hồi đúng thời hạn và tránh bỏ sót công việc quan trọng. | Nhân viên tiếp nhận yêu cầu, trưởng nhóm, bộ phận xử lý | Người tiếp nhận phải kiểm tra nhiều kênh, đọc từng yêu cầu và tự xác định mức độ ưu tiên, người phụ trách. Chưa có số liệu về thời gian xử lý và tần suất yêu cầu. |
+| 2 | Tốn thời gian | Khi phải kiểm tra nhiều hồ sơ đăng ký học bổng hoặc tuyển dụng, tôi muốn nhanh chóng đối chiếu thông tin và phát hiện giấy tờ còn thiếu, để giảm thời gian kiểm tra và hạn chế sai sót trước khi xét duyệt. | Bộ phận tuyển dụng, xét duyệt học bổng, ứng viên | Nhân viên phải kiểm tra từng giấy tờ và đối chiếu với nhiều tiêu chí khác nhau. Chưa có số liệu về thời gian kiểm tra trung bình mỗi hồ sơ. |
+| 3 | Cần đọc, tổng hợp nhiều thông tin | Khi tìm hiểu một lĩnh vực mới để thực hiện công việc hoặc nghiên cứu, tôi muốn nhanh chóng tổng hợp các nguồn tài liệu đáng tin cậy và xác định những kiến thức quan trọng, để không mất quá nhiều thời gian tìm kiếm và chọn lọc thông tin. | Nhân viên nghiên cứu, chuyên viên phân tích, sinh viên | Thông tin phân tán trên nhiều nguồn, cần đọc và đánh giá độ tin cậy trước khi tổng hợp. Chưa có số liệu về thời gian nghiên cứu hoặc số lượng nguồn cần xử lý. |
+| 4 | Lặp lại | Khi phải nhập thông tin từ hóa đơn, chứng từ hoặc biểu mẫu vào hệ thống, tôi muốn hạn chế việc đọc và nhập lại từng trường dữ liệu, để tiết kiệm thời gian và giảm lỗi nhập liệu. | Nhân viên kế toán, hành chính, vận hành | Nhân viên phải đọc tài liệu và nhập lại nhiều trường thông tin, đặc biệt khi tài liệu có định dạng khác nhau. Chưa có số liệu về số chứng từ và thời gian nhập liệu mỗi ngày. |
+| 5 | Cần đọc, tổng hợp nhiều thông tin | Khi phải lựa chọn nhà cung cấp cho một nhu cầu cụ thể, tôi muốn tổng hợp và đối chiếu các báo giá theo chi phí, chất lượng và điều kiện dịch vụ, để lựa chọn phương án phù hợp. | Nhân viên mua hàng, quản lý, doanh nghiệp | Báo giá có cấu trúc, đơn vị tính và điều kiện khác nhau, khiến việc tổng hợp và so sánh thủ công mất thời gian. Chưa có số liệu về thời gian đánh giá mỗi đợt mua hàng. |
 
-**Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
+**Nếu có dùng AI để gợi ý thêm:**
 
-- AI hỗ trợ mở rộng các tình huống có thể ứng dụng AI trong công việc và học tập. Em giữ lại các ý tưởng có người dùng, bối cảnh và khó khăn tương đối cụ thể; đồng thời không lựa chọn những ý tưởng chỉ tập trung vào công nghệ mà chưa làm rõ vấn đề thực tế.
-
-
+AI hỗ trợ mở rộng các tình huống có thể ứng dụng AI trong công việc và học tập. Em giữ lại những ý tưởng có người dùng, bối cảnh và khó khăn tương đối cụ thể; loại bỏ những ý tưởng còn chung chung hoặc mới chỉ mô tả giải pháp công nghệ mà chưa làm rõ vấn đề thực tế. Các ý tưởng được AI gợi ý chỉ là đầu vào tham khảo, không được xem là bằng chứng về nhu cầu người dùng.
 
 ---
 
