@@ -16,6 +16,8 @@
 
 ### 2.1. Pitch
 
+### 2.1. Pitch
+
 Đã nhận **đủ bốn báo cáo cá nhân** của Nguyễn Xuân Khánh Linh, Đậu Hoàng Minh, Đặng Minh Thu và Lê Thế Anh. Bảng dưới tổng hợp **12 candidate từ ba Problem Cards ưu tiên của mỗi thành viên**, không còn chờ báo cáo cá nhân. Việc **trực tiếp trình bày trước nhóm** chưa được xác nhận cho tất cả các dòng; kiểm tra biên bản buổi họp trước khi dùng bảng này như nhật ký pitch chính thức.
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
@@ -26,14 +28,15 @@
 | 4 | Đậu Hoàng Minh | Khi kết thúc cuộc họp, muốn có quyết định, action item, owner và deadline rõ ràng | Người chủ trì và thành viên nhóm | Lọc action item từ ghi chú và viết biên bản thủ công | Được hỏi: “Công ty có cho ghi âm họp không?” (chưa rõ người hỏi) |
 | 5 | Đậu Hoàng Minh | Khi có nhiều email/tin nhắn, muốn xác định tin quan trọng và deadline để không bỏ sót | Nhân viên văn phòng | Đọc và phân loại thông tin đa kênh | Chưa có câu hỏi được xác nhận |
 | 6 | Đậu Hoàng Minh | Khi đi công tác về, muốn chuẩn bị chứng từ đầy đủ để hồ sơ không bị trả lại | Nhân viên, kế toán | Gom hóa đơn và đối chiếu quy định | Chưa có câu hỏi được xác nhận |
-| 7 | Đặng Minh Thu | Khi có sự cố thú cưng, muốn phát hiện và xử lý kịp thời để bảo đảm vệ sinh/an toàn | BQL, an ninh, cư dân | Phát hiện chậm, tìm CCTV và xác minh thủ công (giả thuyết ban đầu) | Chưa có câu hỏi được xác nhận |
-| 8 | Đặng Minh Thu | Khi nghe bài giảng, muốn ghi chú có cấu trúc và hỏi đáp riêng tư để không mất mạch học | Học viên, giáo viên | Nghe, ghi chép, tra cứu đồng thời | Chưa có câu hỏi được xác nhận |
-| 9 | Đặng Minh Thu | Khi nhận yêu cầu qua email/chat/ticket, muốn phân loại ưu tiên và chuyển đúng người | Nhân viên xử lý yêu cầu | Đọc, tổng hợp, phân loại nhiều kênh | Chưa có câu hỏi được xác nhận |
+| 7 | Đặng Minh Thu | Khi nhận nhiều yêu cầu từ email, chat, ticket, form trong cùng một ngày, muốn hiểu nhanh nội dung, mức ưu tiên và người phụ trách để phản hồi đúng hạn, không bỏ sót | Nhân viên tiếp nhận yêu cầu, trưởng nhóm, bộ phận xử lý | Đọc, tổng hợp và phân loại yêu cầu từ nhiều kênh không đồng nhất | [Tên người hỏi] hỏi: "[câu hỏi thật]" — hoặc ghi "Chưa có câu hỏi được xác nhận" nếu không nhớ |
+| 8 | Đặng Minh Thu | Khi kiểm tra nhiều hồ sơ học bổng/tuyển dụng, muốn nhanh chóng trích xuất, đối chiếu thông tin và phát hiện giấy tờ thiếu hoặc sai lệch trước khi xét duyệt | Bộ phận tuyển dụng, xét duyệt học bổng, ứng viên | Đọc, nhập lại và đối chiếu thủ công thông tin từ nhiều định dạng giấy tờ | Chưa có câu hỏi được xác nhận |
+| 9 | Đặng Minh Thu | Khi chọn nhà cung cấp, muốn so sánh báo giá theo chi phí, chất lượng và điều kiện dịch vụ mà không phải đối chiếu thủ công từng tài liệu | Nhân viên mua hàng, quản lý, doanh nghiệp | Chuẩn hóa và so sánh báo giá không đồng nhất về cấu trúc và điều kiện | Chưa có câu hỏi được xác nhận |
 | 10 | Lê Thế Anh | Khi xảy ra sự cố thú cưng, muốn xác minh nhanh để BQL xử lý | BQL, an ninh, cư dân | Chưa rõ độ trễ phát hiện và công sức xác minh CCTV | Có chuẩn bị câu hỏi về nhận diện sai và khác biệt nội quy giữa tòa nhà; chưa xác nhận đã được hỏi trực tiếp |
 | 11 | Lê Thế Anh | Khi căn tin đông, muốn biết thời gian chờ/suất còn lại để chủ động ăn trưa | Học viên, căn tin | Xếp hàng khoảng 15–20 phút theo trải nghiệm cá nhân | Chưa có câu hỏi được xác nhận |
 | 12 | Lê Thế Anh | Khi đi xe buýt cao điểm, muốn biết xe đến có còn đón khách được không | Hành khách | Chỉ biết xe đã đầy khi đến trạm; có lần phải đợi thêm khoảng 20 phút | Chưa có câu hỏi được xác nhận |
 
-**Nhận xét từ thảo luận:** Minh ghi rằng card tóm tắt sau họp bị loại khỏi shortlist cuối vì đã có nhiều công cụ tương tự; Linh ghi mình lập bảng tiêu chí để giúp nhóm chọn; Thế Anh và Thu có candidate cùng domain thú cưng. Hai candidate thú cưng ở #7 và #10 được gộp thành một hướng bài toán khi hội tụ.
+**Nhận xét từ thảo luận:** Minh ghi rằng card tóm tắt sau họp bị loại khỏi shortlist cuối vì đã có nhiều công cụ tương tự; Linh ghi mình lập bảng tiêu chí để giúp nhóm chọn; Thế Anh là người đưa candidate sự cố thú cưng (#10) vào shortlist; Thu có hai candidate cùng pattern xử lý thông tin đa nguồn với Minh (#5) và Linh (#3) ở cluster C. [Bổ sung thêm nếu có điều gì khác thực sự được thảo luận.]
+
 
 ### 2.2. Cluster
 

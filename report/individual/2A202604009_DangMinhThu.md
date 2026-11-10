@@ -16,23 +16,21 @@
 
 ## 2. Scan problem (CP1)
 
-Lăng kính: **Tốn thời gian · Cần đọc, tổng hợp nhiều thông tin · Lặp lại · Pain từ người khác.**
+Lăng kính: **Tốn thời gian · Cần đọc, tổng hợp nhiều thông tin · Lặp lại · Khó ra quyết định.**
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | Tốn thời gian | Khi xảy ra sự cố liên quan đến thú cưng tại khu đô thị, tôi muốn nhanh chóng xác định vị trí, truy vết và tìm căn hộ liên quan, để giảm thời gian xử lý và đảm bảo an toàn, vệ sinh cho cư dân. | Ban Quản lý, nhân viên an ninh, cư dân | Cần tra cứu nhiều camera, đối chiếu dữ liệu ra vào và hồ sơ thú cưng. Chưa có số liệu baseline về thời gian xử lý. |
-| 2 | Tốn thời gian | Khi chấm bài IELTS Writing và đã ghi nhận xét về một câu viết của học sinh, tôi muốn nhanh chóng có phương án chỉnh sửa phù hợp với nhận xét và phong cách phản hồi của mình, để giảm thời gian viết câu sửa mẫu mà vẫn đảm bảo chất lượng. | Giáo viên IELTS, học sinh | Giáo viên phải tự diễn đạt lại câu sửa cho từng nhận xét; thời gian tiết kiệm chưa được đo. |
-| 3 | Cần đọc, tổng hợp nhiều thông tin | Khi kết thúc một cuộc họp, tôi muốn nhanh chóng tổng hợp các nội dung quan trọng, quyết định và công việc cần thực hiện, để mọi người nắm rõ trách nhiệm và deadline. | Người tổ chức họp, thành viên nhóm, quản lý | Thông tin nằm trong ghi chú và nội dung trao đổi; cần đọc lại và tổng hợp sau mỗi cuộc họp. |
-| 4 | Cần đọc, tổng hợp nhiều thông tin | Khi nhận được nhiều email và tin nhắn công việc, tôi muốn nhanh chóng xác định nội dung quan trọng và mức độ ưu tiên, để không bỏ lỡ yêu cầu hoặc deadline cần xử lý. | Nhân viên văn phòng, trưởng nhóm | Yêu cầu đến từ nhiều nguồn, phải đọc và phân loại thủ công; chưa có số liệu về thời gian xử lý. |
-| 5 | Tốn thời gian | Khi tìm phòng trọ hoặc tìm việc, tôi phải lọc qua nhiều tin đăng, tôi muốn nhanh chóng loại bỏ những tin không phù hợp, để tập trung vào các cơ hội đáng quan tâm. | Người tìm việc, người tìm phòng trọ | Phải đọc và đối chiếu nhiều tin đăng với tiêu chí cá nhân; số lượng tin và thời gian lọc chưa được thống kê. |
-| 6 | Cần đọc, tổng hợp nhiều thông tin | Khi tham gia bài giảng có nhiều kiến thức và khái niệm mới, tôi muốn ghi chú nội dung theo cấu trúc rõ ràng, để dễ theo dõi và ôn tập sau buổi học. | Học viên, giáo viên | Người học phải đồng thời nghe giảng và ghi chép; có nguy cơ bỏ sót nội dung khi tốc độ giảng nhanh. |
-| 7 | Cần đọc, tổng hợp nhiều thông tin | Khi phân tích doanh số và độ uy tín của các gian hàng trên Shopee/TikTok Shop, tôi muốn nhận diện dấu hiệu đơn hàng ảo, đánh giá giả và doanh số bất thường, để đưa ra quyết định kinh doanh chính xác hơn. | Nhà bán hàng, thương hiệu, đơn vị phân tích thị trường, người tiêu dùng | Phải đối chiếu nhiều chỉ số và đánh giá; chưa có dữ liệu xác thực về tỷ lệ gian lận. |
-| 8 | Cần đọc, tổng hợp nhiều thông tin | Khi tham gia buổi học có nhiều kiến thức mới, tôi muốn vừa theo dõi bài giảng, vừa lưu lại ý chính có hệ thống và được giải đáp thắc mắc riêng tư, để không mất mạch học và có tài liệu dễ ôn tập. | Học viên, giáo viên | Người học phải chuyển đổi liên tục giữa nghe giảng, ghi chép và tìm câu trả lời; chưa có số liệu khảo sát. |
-
+| 1 | Tốn thời gian | Khi tôi nhận được nhiều yêu cầu từ nhiều kênh (email, chat, ticket, form) trong cùng một ngày, tôi muốn nhanh chóng hiểu nội dung, mức độ ưu tiên và người/đơn vị phù hợp để xử lý, để phản hồi đúng thời hạn và tránh bỏ sót công việc quan trọng. | Nhân viên tiếp nhận yêu cầu, trưởng nhóm, bộ phận xử lý | Phải kiểm tra nhiều kênh, đọc từng yêu cầu và tự xác định mức độ ưu tiên, người phụ trách. |
+| 2 | Tốn thời gian| Khi phải kiểm tra nhiều hồ sơ đăng ký học bổng hoặc tuyển dụng, tôi muốn nhanh chóng đối chiếu thông tin và phát hiện giấy tờ còn thiếu, để giảm thời gian kiểm tra và hạn chế sai sót trước khi xét duyệt. | Bộ phận tuyển dụng, xét duyệt học bổng, ứng viên | Phải kiểm tra từng giấy tờ và đối chiếu với nhiều tiêu chí khác nhau. |
+| 3 | Cần đọc, tổng hợp nhiều thông tin | Khi tìm hiểu một lĩnh vực mới để thực hiện công việc hoặc nghiên cứu, tôi muốn nhanh chóng tổng hợp các nguồn tài liệu đáng tin cậy và xác định những kiến thức quan trọng, để không mất quá nhiều thời gian tìm kiếm và chọn lọc thông tin. | Nhân viên nghiên cứu, chuyên viên phân tích, sinh viên | Thông tin phân tán trên nhiều nguồn, khó đánh giá độ tin cậy và xác định nội dung cần đọc trước. |
+| 4 | Tốn thời gian| Khi phải nhập dữ liệu từ hóa đơn, chứng từ hoặc biểu mẫu vào hệ thống, tôi muốn tự động trích xuất và điền các trường thông tin tương ứng, để giảm thao tác thủ công và hạn chế lỗi nhập liệu. | Nhân viên kế toán, hành chính, vận hành | Phải đọc và nhập lại nhiều trường dữ liệu từ các tài liệu có định dạng khác nhau. |
+| 5 | Khó ra quyết định| Khi phải lựa chọn nhà cung cấp cho một nhu cầu cụ thể, tôi muốn so sánh các báo giá theo chi phí, chất lượng và điều kiện dịch vụ, để lựa chọn phương án phù hợp mà không phải đối chiếu thủ công từng tài liệu. | Nhân viên mua hàng, quản lý, doanh nghiệp | Báo giá có cấu trúc và điều kiện khác nhau, khó so sánh trực tiếp giữa nhiều nhà cung cấp. |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
--
+- AI hỗ trợ mở rộng các tình huống có thể ứng dụng AI trong công việc và học tập. Em giữ lại các ý tưởng có người dùng, bối cảnh và khó khăn tương đối cụ thể; đồng thời không lựa chọn những ý tưởng chỉ tập trung vào công nghệ mà chưa làm rõ vấn đề thực tế.
+
+
 
 ---
 
@@ -42,113 +40,27 @@ Lăng kính: **Tốn thời gian · Cần đọc, tổng hợp nhiều thông ti
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | Truy vết sự cố liên quan đến thú cưng tại khu đô thị | Có nhiều nguồn dữ liệu cần đối chiếu, quy trình hiện tại gồm nhiều thao tác thủ công và bottleneck có thể xác định tương đối rõ. Impact liên quan trực tiếp đến thời gian xử lý, vệ sinh và an toàn cư dân. | Khả năng nhận diện hành vi cụ thể từ CCTV, mức độ đầy đủ của dữ liệu camera và khả năng liên kết chính xác người - thú cưng - căn hộ. |
-| 2 | Hỗ trợ ghi chú và giải đáp thắc mắc trong buổi học | Vấn đề xuất hiện trong bối cảnh học tập thực tế, liên quan đến nhiều hoạt động diễn ra đồng thời và ảnh hưởng trực tiếp đến khả năng tiếp thu kiến thức. | Mức độ chính xác của nội dung ghi chú, khả năng xử lý câu hỏi theo ngữ cảnh và mức độ sẵn sàng sử dụng của học viên. |
-| 3 | Phân loại và ưu tiên yêu cầu từ nhiều kênh | Yêu cầu đến từ nhiều nguồn, cần tổng hợp, phân loại và xác định người phụ trách. Có thể xác định quy trình và đánh giá hiệu quả bằng thời gian xử lý, tỷ lệ bỏ sót. | Khả năng tích hợp các kênh, tính nhất quán của dữ liệu và cách xác định mức độ ưu tiên giữa các loại yêu cầu. |
+| 1 | Phân loại và ưu tiên yêu cầu từ nhiều kênh (từ Idea 1) | Yêu cầu đến từ nhiều nguồn, cần tổng hợp, phân loại và xác định người phụ trách. Có thể xác định quy trình và đánh giá hiệu quả bằng thời gian xử lý, tỷ lệ bỏ sót. | Khả năng tích hợp các kênh, tính nhất quán của dữ liệu và cách xác định mức độ ưu tiên giữa các loại yêu cầu. |
+| 2 | Kiểm tra và đối chiếu hồ sơ tự động (từ Idea 2 + Idea 4) | Cả hai đều liên quan đến việc trích xuất thông tin từ tài liệu, đối chiếu dữ liệu và phát hiện thông tin thiếu hoặc sai lệch. Có thể phát triển thành quy trình kiểm tra hồ sơ đầu vào. | Độ chính xác khi trích xuất thông tin từ các định dạng tài liệu khác nhau và khả năng xử lý các trường hợp ngoại lệ. |
+| 3 | So sánh và đánh giá báo giá nhà cung cấp (từ Idea 5) | Có nhu cầu thực tế trong hoạt động mua hàng, nhiều thông tin cần chuẩn hóa và so sánh trước khi ra quyết định. | Khả năng chuẩn hóa các tiêu chí, điều kiện và cách đánh giá giữa những báo giá không đồng nhất. |
 
 
 ### Problem Card #1
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi xảy ra các sự cố liên quan đến thú cưng (phóng uế, thất lạc, gây thương tích) tại khu đô thị, tôi muốn nhanh chóng phát hiện, truy vết và xác định căn hộ liên quan, để giảm thời gian xử lý, đảm bảo vệ sinh và an toàn cho cư dân. |
-| Actor | Ban Quản lý khu đô thị, nhân viên an ninh. |
-| Thời điểm / bối cảnh | Khi cư dân phản ánh hoặc nhân viên phát hiện sự cố tại khu vực chung như hành lang, thang máy, sảnh và khuôn viên. |
-| Quy trình hiện tại (3-7 bước) | 1. Tiếp nhận phản ánh về sự cố. 2. Xác định thời gian và vị trí xảy ra. 3. Tìm kiếm thủ công trên các camera liên quan. 4. Theo dõi hình ảnh để truy vết người dắt chó. 5. Đối chiếu dữ liệu ra vào, thang máy và hồ sơ thú cưng. 6. Xác định căn hộ liên quan và chuyển thông tin cho bộ phận xử lý. |
-| Bottleneck | Bước tìm kiếm, truy vết trên nhiều camera và đối chiếu dữ liệu từ nhiều nguồn. Đây là công đoạn phụ thuộc nhiều vào thao tác thủ công. Thời gian cụ thể chưa được đo baseline. |
-| Impact | Kéo dài thời gian xử lý phản ánh, tăng khối lượng công việc của nhân viên BQL, ảnh hưởng đến vệ sinh, an toàn và trải nghiệm cư dân. |
-| Success metric | Giảm ít nhất 50% thời gian xác định căn hộ liên quan so với quy trình hiện tại. Đo bằng cách ghi nhận thời gian xử lý trên các tình huống tương đương trước và sau khi áp dụng giải pháp. Đây là mục tiêu đề xuất, cần kiểm chứng qua thử nghiệm. |
-| Phương án không dùng AI | Chuẩn hóa quy trình tiếp nhận phản ánh, phân loại camera theo khu vực, lưu trữ dữ liệu ra vào và hồ sơ thú cưng tập trung; xây dựng checklist truy vết để nhân viên thực hiện thống nhất. |
-| Giả thuyết về AI | AI hỗ trợ phát hiện hành vi bất thường, nhận diện và theo dõi cặp người - thú cưng qua các camera, kết hợp dữ liệu sẵn có để đề xuất Top-3 căn hộ khả nghi kèm bằng chứng. Nhân viên BQL kiểm tra và xác nhận kết quả. |
-| Cảm nhận nhanh | Workflow |
-
-**Quy trình nháp hiện tại:**
-
-```text
-HIỆN TẠI
-
-[1. Tiếp nhận phản ánh]
-          |
-          v
-[2. Xác định thời gian, vị trí xảy ra]
-          |
-          v
-[3. Tìm kiếm thủ công trên nhiều camera]
-          |
-          v
-[4. Theo dõi, truy vết người dắt chó]
-          |
-          v
-[5. Đối chiếu dữ liệu ra vào, thang máy,
-    hồ sơ đăng ký thú cưng]
-          |
-          v
-[6. Xác định căn hộ liên quan]
-          |
-          v
-[7. Chuyển thông tin để xử lý]
-
-BOTTLENECK:
-Tìm kiếm trên nhiều camera và đối chiếu dữ liệu thủ công.
-```
-
-### Problem Card #2
-
-| Trường | Nội dung |
-|---|---|
-| Job Story | Khi tham gia các buổi học có lượng kiến thức lớn và nhiều khái niệm mới, tôi muốn vừa theo dõi được nội dung bài giảng, vừa lưu lại các ý chính một cách có hệ thống và được giải đáp những thắc mắc ngay khi phát sinh mà không phải công khai danh tính, để không bị mất mạch bài học và có tài liệu dễ hiểu, dễ ôn tập sau buổi học. |
-| Actor | Học viên, giáo viên. |
-| Thời điểm / bối cảnh | Trong các buổi học có tốc độ truyền tải kiến thức nhanh, nhiều thuật ngữ và nội dung liên kết với nhau. |
-| Quy trình hiện tại (3-7 bước) | 1. Theo dõi bài giảng. 2. Nghe và ghi chép nội dung quan trọng. 3. Tự hệ thống hóa kiến thức sau khi học. 4. Tra cứu những khái niệm chưa hiểu. 5. Đặt câu hỏi cho giáo viên hoặc bạn học. 6. Tổng hợp lại tài liệu để ôn tập. |
-| Bottleneck | Người học phải đồng thời tiếp nhận thông tin, ghi chép và xử lý thắc mắc. Việc ghi chép có thể làm gián đoạn theo dõi bài giảng. |
-| Impact | Bỏ sót kiến thức, ghi chú thiếu liên kết, mất thời gian hệ thống hóa và ngại đặt câu hỏi trước lớp. |
-| Success metric | Đề xuất đo tỷ lệ nội dung quan trọng được ghi chú đầy đủ, thời gian hoàn thiện tài liệu sau buổi học và thời gian phản hồi câu hỏi. Chưa có baseline và target được kiểm chứng. |
-| Phương án không dùng AI | Cung cấp template ghi chú, tài liệu bài giảng có cấu trúc, bộ câu hỏi thường gặp và kênh hỏi đáp riêng tư. |
-| Giả thuyết về AI | Speech-to-Text kết hợp LLM để tạo ghi chú có cấu trúc, xây dựng concept map và trả lời câu hỏi theo ngữ cảnh bài giảng. |
-| Cảm nhận nhanh | Workflow |
-
-Quy trình nháp hiện tại:
-
-```text
-[Theo dõi bài giảng]
-          |
-          v
-[Nghe và ghi chép đồng thời]
-          |
-          v
-[Tự tổng hợp, hệ thống hóa]
-          |
-          v
-[Tra cứu khái niệm chưa hiểu]
-          |
-          v
-[Đặt câu hỏi / chờ giải đáp]
-          |
-          v
-[Hoàn thiện tài liệu ôn tập]
-
-BOTTLENECK:
-Khó duy trì đồng thời việc nghe giảng, ghi chép và xử lý câu hỏi phát sinh.
-```
-
-
-### Problem Card #3
-
-
-| Trường | Nội dung |
-|---|---|
 | Job Story | Khi tôi nhận được nhiều yêu cầu từ nhiều kênh (email, chat, ticket, form) trong cùng một ngày, tôi muốn nhanh chóng hiểu nội dung, mức độ ưu tiên và người/đơn vị phù hợp để xử lý, để phản hồi đúng thời hạn và tránh bỏ sót công việc quan trọng. |
-| Actor | Người tiếp nhận yêu cầu, nhân viên phụ trách xử lý, người gửi yêu cầu. |
-| Thời điểm / bối cảnh | Khi có nhiều yêu cầu đến đồng thời từ các kênh giao tiếp khác nhau trong ngày. |
-| Quy trình hiện tại (3-7 bước) | 1. Tiếp nhận yêu cầu từ email, chat, ticket và form. 2. Đọc nội dung từng yêu cầu. 3. Xác định vấn đề và deadline. 4. Đánh giá mức độ ưu tiên. 5. Xác định người hoặc đơn vị phụ trách. 6. Chuyển giao và theo dõi tiến độ. |
-| Bottleneck | Đọc, tổng hợp và phân loại yêu cầu từ nhiều kênh, đặc biệt khi nội dung không đồng nhất hoặc thiếu thông tin. |
+| Actor | Nhân viên tiếp nhận yêu cầu, trưởng nhóm, bộ phận xử lý. |
+| Thời điểm / bối cảnh | Khi có nhiều yêu cầu đến đồng thời từ các kênh giao tiếp khác nhau trong cùng một ngày. |
+| Quy trình hiện tại (3-7 bước) | 1. Kiểm tra các kênh tiếp nhận (email, chat, ticket, form). 2. Đọc nội dung từng yêu cầu. 3. Xác định vấn đề và deadline. 4. Đánh giá mức độ ưu tiên. 5. Xác định người hoặc đơn vị phụ trách. 6. Chuyển giao và theo dõi tiến độ. |
+| Bottleneck | Đọc, tổng hợp và phân loại yêu cầu từ nhiều kênh, đặc biệt khi nội dung không đồng nhất hoặc thiếu thông tin. Thời gian cụ thể chưa được đo baseline. |
 | Impact | Bỏ sót yêu cầu, phân công sai người phụ trách, phản hồi chậm và ảnh hưởng đến chất lượng dịch vụ. |
 | Success metric | Đề xuất đo thời gian từ lúc tiếp nhận đến khi phân công, tỷ lệ yêu cầu bị bỏ sót và tỷ lệ phân công chính xác. Chưa có baseline và target được kiểm chứng. |
 | Phương án không dùng AI | Hợp nhất các kênh tiếp nhận vào một hệ thống quản lý ticket, sử dụng quy tắc phân loại và checklist ưu tiên cố định. |
 | Giả thuyết về AI | AI tóm tắt nội dung, nhận diện deadline, phân loại mức độ khẩn cấp và gợi ý đơn vị xử lý; con người xác nhận trước khi phân công. |
 | Cảm nhận nhanh | Workflow |
 
-Quy trình nháp hiện tại:
+**Quy trình nháp hiện tại:**
 
 ```text
 [Tiếp nhận email / chat / ticket / form]
@@ -175,41 +87,120 @@ BOTTLENECK:
 Tổng hợp và phân loại thông tin từ nhiều kênh không đồng nhất.
 ```
 
+### Problem Card #2
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi phải kiểm tra nhiều hồ sơ đăng ký học bổng hoặc tuyển dụng, tôi muốn nhanh chóng trích xuất, đối chiếu thông tin và phát hiện giấy tờ còn thiếu hoặc sai lệch, để giảm thời gian kiểm tra và hạn chế sai sót trước khi xét duyệt. |
+| Actor | Bộ phận tuyển dụng, bộ phận xét duyệt học bổng, ứng viên. |
+| Thời điểm / bối cảnh | Giai đoạn tiếp nhận và kiểm tra hồ sơ đầu vào, khi có nhiều hồ sơ với giấy tờ và định dạng khác nhau cần đối chiếu theo nhiều tiêu chí. |
+| Quy trình hiện tại (3-7 bước) | 1. Tiếp nhận hồ sơ. 2. Mở và đọc từng giấy tờ. 3. Nhập hoặc ghi lại thông tin cần thiết. 4. Đối chiếu với tiêu chí và giữa các giấy tờ. 5. Phát hiện giấy tờ thiếu hoặc sai lệch. 6. Liên hệ ứng viên bổ sung và chuyển hồ sơ đi xét duyệt. |
+| Bottleneck | Đọc và nhập lại thông tin từ tài liệu có định dạng khác nhau, sau đó đối chiếu thủ công với nhiều tiêu chí. Thời gian cụ thể chưa được đo baseline. |
+| Impact | Mất nhiều thời gian kiểm tra, dễ sai sót hoặc bỏ sót giấy tờ thiếu, làm chậm quá trình xét duyệt và ảnh hưởng đến ứng viên. |
+| Success metric | Đề xuất đo thời gian kiểm tra mỗi hồ sơ, tỷ lệ phát hiện đúng hồ sơ thiếu hoặc sai và tỷ lệ trích xuất đúng các trường thông tin. Chưa có baseline và target được kiểm chứng. |
+| Phương án không dùng AI | Chuẩn hóa biểu mẫu và định dạng nộp hồ sơ, dùng form nhập liệu có trường bắt buộc và checklist đối chiếu cố định. |
+| Giả thuyết về AI | AI trích xuất thông tin từ giấy tờ, đối chiếu với tiêu chí và đánh dấu các mục thiếu hoặc nghi sai lệch; nhân viên kiểm tra và quyết định cuối cùng. |
+| Cảm nhận nhanh | Workflow |
+
+**Quy trình nháp hiện tại:**
+
+```text
+[Tiếp nhận hồ sơ]
+        |
+        v
+[Mở, đọc từng giấy tờ]
+        |
+        v
+[Nhập / ghi lại thông tin]
+        |
+        v
+[Đối chiếu với tiêu chí và giữa các giấy tờ]
+        |
+        v
+[Phát hiện giấy tờ thiếu / sai lệch]
+        |
+        v
+[Liên hệ bổ sung, chuyển xét duyệt]
+
+BOTTLENECK:
+Đọc, nhập lại và đối chiếu thủ công thông tin từ nhiều định dạng tài liệu.
+```
+
+
+### Problem Card #3
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi phải lựa chọn nhà cung cấp cho một nhu cầu cụ thể, tôi muốn so sánh các báo giá theo chi phí, chất lượng và điều kiện dịch vụ, để lựa chọn phương án phù hợp mà không phải đối chiếu thủ công từng tài liệu. |
+| Actor | Nhân viên mua hàng, quản lý, doanh nghiệp. |
+| Thời điểm / bối cảnh | Khi nhận nhiều báo giá từ các nhà cung cấp, mỗi báo giá có cấu trúc và điều kiện khác nhau, trước khi ra quyết định mua. |
+| Quy trình hiện tại (3-7 bước) | 1. Thu thập báo giá từ các nhà cung cấp. 2. Đọc từng báo giá. 3. Trích các thông tin chính (giá, điều kiện, thời gian giao, bảo hành). 4. Tổng hợp vào bảng so sánh. 5. Đánh giá theo tiêu chí chi phí, chất lượng, điều kiện. 6. Trình quản lý và chọn nhà cung cấp. |
+| Bottleneck | Chuẩn hóa và so sánh các báo giá không đồng nhất về cấu trúc, đơn vị và điều kiện. Thời gian cụ thể chưa được đo baseline. |
+| Impact | Mất thời gian đối chiếu, dễ bỏ sót điều khoản quan trọng hoặc so sánh không công bằng, dẫn đến quyết định chưa tối ưu. |
+| Success metric | Đề xuất đo thời gian lập bảng so sánh, số điều khoản bị bỏ sót và mức độ thống nhất giữa kết quả so sánh với đánh giá của người mua. Chưa có baseline và target được kiểm chứng. |
+| Phương án không dùng AI | Chuẩn hóa mẫu yêu cầu báo giá (RFQ), yêu cầu nhà cung cấp điền theo cùng biểu mẫu và dùng bảng tính so sánh với tiêu chí chấm điểm cố định. |
+| Giả thuyết về AI | AI trích xuất và chuẩn hóa thông tin từ báo giá, tạo bảng so sánh theo tiêu chí và nêu điểm khác biệt; người mua kiểm tra và đưa ra quyết định cuối cùng. |
+| Cảm nhận nhanh | Workflow |
+
+**Quy trình nháp hiện tại:**
+
+```text
+[Thu thập báo giá]
+        |
+        v
+[Đọc từng báo giá]
+        |
+        v
+[Trích thông tin chính]
+        |
+        v
+[Tổng hợp bảng so sánh]
+        |
+        v
+[Đánh giá theo tiêu chí]
+        |
+        v
+[Trình quản lý, chọn nhà cung cấp]
+
+BOTTLENECK:
+Chuẩn hóa và so sánh báo giá không đồng nhất về cấu trúc và điều kiện.
+```
+
+
 ### Card muốn pitch nhất
 
-- Card số: 1 - Truy vết sự cố liên quan đến thú cưng tại khu đô thị.
-- Vì sao: Đây là bài toán có quy trình xử lý thực tế, nhiều bước phụ thuộc vào việc tìm kiếm và đối chiếu thủ công. Điểm nghẽn tương đối rõ, có thể phân tích bằng các công nghệ hiện có và đề xuất một quy trình hỗ trợ cụ thể. Kết quả cũng có thể đánh giá bằng thời gian xác định căn hộ và độ chính xác của các gợi ý.
-- Câu hỏi muốn nhóm phản biện: Làm thế nào để xác định đúng mối liên hệ giữa người và thú cưng khi đối tượng di chuyển qua nhiều camera, đặc biệt khi có nhiều người và thú cưng xuất hiện trong cùng một khoảng thời gian? Làm thế nào để hạn chế việc quy kết nhầm căn hộ?
+- Card số: 1 - Phân loại và ưu tiên yêu cầu từ nhiều kênh.
+- Vì sao: Bài toán xuất hiện hằng ngày trong công việc và người chịu ảnh hưởng dễ xác định (nhân viên tiếp nhận, trưởng nhóm, bộ phận xử lý). Quy trình hiện tại có các bước rõ ràng, trong đó điểm nghẽn nằm ở việc đọc, tổng hợp và phân loại thủ công. Kết quả cũng có thể đánh giá bằng các chỉ số cụ thể như thời gian từ lúc tiếp nhận đến khi phân công, tỷ lệ yêu cầu bị bỏ sót và tỷ lệ phân công chính xác.
+- Câu hỏi muốn nhóm phản biện: Làm thế nào để AI xác định đúng mức độ ưu tiên khi cùng một loại yêu cầu có thể khẩn cấp hay không tùy ngữ cảnh? Khi yêu cầu thiếu thông tin hoặc đến từ nhiều kênh với định dạng khác nhau, AI nên xử lý ra sao để không phân công sai người phụ trách?
 
 
 ### AI đã phản biện card thế nào
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| Job Story ban đầu gộp nhiều loại sự cố, có thể khiến phạm vi bài toán quá rộng. | Đồng ý | Giữ các tình huống phóng uế, thất lạc và gây thương tích làm bối cảnh chung, tập trung vào quy trình phát hiện, truy vết và xác định căn hộ. |
-| Chưa phân biệt rõ phát hiện thú cưng với nhận diện hành vi vi phạm. | Đồng ý | Làm rõ rằng nhận diện chó, mèo chưa đủ; cần xác định hành vi cụ thể và truy vết đối tượng liên quan. |
-| Chưa có baseline về thời gian xử lý. | Đồng ý | Xác định giảm ít nhất 50% thời gian là mục tiêu cần kiểm chứng, không coi đây là kết quả đã đạt được. |
-| Việc xác định căn hộ chỉ dựa vào hình ảnh có thể dẫn đến kết luận sai. | Đồng ý | Bổ sung đối chiếu dữ liệu ra vào, thang máy và hồ sơ thú cưng; giữ bước xác nhận cuối cùng cho nhân viên BQL. |
+| Job Story chưa làm rõ tình huống và mục tiêu xử lý, dễ khiến phạm vi bài toán quá rộng. | Đồng ý | Thu hẹp phạm vi vào các sự cố liên quan đến thú cưng như phóng uế, thất lạc hoặc gây thương tích; tập trung vào việc phát hiện, truy vết và xác định căn hộ liên quan. |
+| Chưa phân biệt rõ việc phát hiện thú cưng với việc nhận diện hành vi gây sự cố. | Đồng ý | Làm rõ hệ thống không chỉ nhận diện chó, mèo mà còn cần hỗ trợ phát hiện hành vi hoặc tình huống bất thường liên quan đến thú cưng để nhân viên kiểm tra. |
+| Chưa có baseline để đánh giá hiệu quả tìm kiếm camera thủ công. | Đồng ý | Xác định thời gian nhân viên tìm kiếm thủ công trên nhiều camera là baseline; mục tiêu giảm ít nhất 50% thời gian xử lý là giả thuyết cần kiểm chứng, không phải kết quả đã đạt được. |
+| Việc xác định căn hộ hoặc chủ nuôi chỉ dựa trên hình ảnh camera có thể dẫn đến kết luận sai. | Đồng ý | Bổ sung bước đối chiếu hành trình di chuyển qua các camera và thông tin liên quan; nhân viên Ban Quản lý vẫn là người xác minh và đưa ra kết luận cuối cùng. |
 
 
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-Trong phạm vi thông tin và hoạt động nhóm đã ghi nhận, tôi tham gia trực tiếp CP5, tập trung vào research giải pháp công nghệ và phân tích quy trình trước/sau.
+Trong phạm vi thông tin và hoạt động nhóm đã ghi nhận, tôi tham gia trực tiếp vào CP5, tập trung nghiên cứu giải pháp công nghệ, phân tích quy trình hiện tại và đề xuất quy trình có AI hỗ trợ.
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | Đề xuất và trình bày bài toán truy vết sự cố liên quan đến thú cưng tại khu đô thị. | Đưa bài toán vào nhóm các candidate được cân nhắc và phát triển. |
-| Phản biện bài của bạn khác | Chưa có thông tin cụ thể về câu hỏi đã đặt. | Cần bổ sung câu hỏi thực tế đã đặt trong buổi thảo luận. |
-| Nhận phản biện | Tiếp nhận các vấn đề cần làm rõ về khả năng phát hiện hành vi, truy vết và xác định căn hộ. | Làm rõ sự khác biệt giữa phát hiện đối tượng và nhận diện hành vi; bổ sung yêu cầu đối chiếu dữ liệu. |
-| Gom cluster / cây OST | Tham gia quá trình hội tụ ý tưởng của nhóm. | Nhóm tập trung phát triển candidate về truy vết sự cố thú cưng. |
-| Chọn candidate problem | Tham gia lựa chọn bài toán thú cưng làm bài toán được phát triển tiếp. | Nhóm thống nhất hướng nghiên cứu về phát hiện, truy vết và xác định căn hộ liên quan. |
-| **Quy trình nhóm (CP5)** | Phân tích quy trình hiện tại của BQL từ tiếp nhận phản ánh, xác định vị trí, tìm kiếm camera đến đối chiếu dữ liệu ra vào và hồ sơ thú cưng. Tham gia đề xuất quy trình tương lai có AI hỗ trợ. | Xác định bottleneck chính là tìm kiếm, truy vết và đối chiếu thủ công, thay vì chỉ nằm ở bước phát hiện sự cố. |
-| Problem Statement | Tham gia làm rõ actor, bottleneck, impact và success metric của bài toán. | Làm rõ mục tiêu giảm ít nhất 50% thời gian xác định căn hộ, với kết quả cần được kiểm chứng qua thử nghiệm. |
-| Mức can thiệp AI | Tham gia phân tích lựa chọn mức AI Workflow thay vì Agent. | Định hướng giải pháp theo quy trình có các bước xác định trước, AI hỗ trợ những công đoạn cần nhận diện và phân tích, con người kiểm tra kết quả. |
-| Quyết định | Tham gia làm rõ lý do lựa chọn AI Workflow và các giới hạn cần có. | Nhấn mạnh khả năng kiểm soát, truy xuất bằng chứng và xác nhận của con người trước khi xử lý sự cố. |
-
+| Pitch Problem Card | Trình bày bài toán hỗ trợ BQL phát hiện các sự cố liên quan đến thú cưng tại khu vực chung thông qua hệ thống camera CCTV. | Đưa bài toán vào nhóm candidate được cân nhắc và phát triển. |
+| Phản biện bài của bạn khác | Cần bổ sung câu hỏi thực tế em đã đặt cho bài toán của thành viên khác. | Thể hiện đóng góp phản biện trong quá trình thảo luận nhóm. |
+| Nhận phản biện | Tiếp nhận góp ý về phạm vi bài toán, khả năng phát hiện hành vi và rủi ro khi AI đưa ra kết luận từ hình ảnh camera. | Làm rõ rằng AI chỉ hỗ trợ phát hiện dấu hiệu nghi vấn và gửi cảnh báo; nhân viên BQL là người kiểm tra, xác minh. |
+| Gom cluster / cây OST | Tham gia quá trình hội tụ và phân nhóm các ý tưởng của nhóm. | Góp phần định hướng nhóm phát triển candidate về phát hiện sự cố liên quan đến thú cưng. |
+| Chọn candidate problem | Tham gia lựa chọn bài toán phát hiện sự cố thú cưng để phát triển tiếp. | Nhóm thống nhất hướng nghiên cứu tập trung vào phát hiện sự kiện và cảnh báo kịp thời cho BQL. |
+| Quy trình nhóm (CP5) | Phân tích quy trình hiện tại của BQL và tham gia đề xuất quy trình tương lai có AI hỗ trợ phát hiện sự cố từ camera CCTV. | Xác định bottleneck giả định là khoảng thời gian từ khi sự cố xảy ra đến khi BQL phát hiện và tiếp nhận thông tin. |
+| Problem Statement | Tham gia làm rõ actor, bottleneck, impact và success metric của bài toán. | Chuyển trọng tâm metric sang detection latency; mục tiêu giảm ít nhất 50% là target pilot cần kiểm chứng, chưa phải kết quả thực tế. |
+| Mức can thiệp AI | Tham gia phân tích lựa chọn AI Workflow kết hợp Computer Vision và con người xác minh. | AI phát hiện dấu hiệu sự cố và gửi cảnh báo; nhân viên an ninh kiểm tra clip và quyết định hướng xử lý. |
+| Quyết định | Tham gia làm rõ phạm vi triển khai và các điều kiện cần kiểm chứng. | Nhóm đề xuất Not Yet với triển khai rộng, Go có điều kiện cho pilot trên video được cấp phép. |
 
 ### CP5 — Phân tích quy trình trước và sau
 
@@ -277,12 +268,13 @@ Quy trình tương lai đề xuất:
 
 Mục tiêu thay đổi:
 
-- Giảm thao tác tìm kiếm và đối chiếu thủ công.
-- Rút ngắn thời gian xác định căn hộ liên quan ít nhất 50% so với baseline.
-- Cung cấp bằng chứng để nhân viên có thể kiểm tra lại.
-- Không để AI tự động kết luận cá nhân hoặc căn hộ vi phạm.
+- Rút ngắn thời gian từ khi sự cố xảy ra đến khi BQL nhận được cảnh báo.
+- Đề xuất giảm ít nhất 50% detection latency trong giai đoạn pilot.
+- Theo dõi thêm recall, precision theo từng loại sự kiện và số cảnh báo sai trên mỗi camera-ca.
+- Cung cấp clip hoặc bằng chứng để nhân viên kiểm tra và xác minh.
+- Không để AI tự xác định chủ nuôi, căn hộ vi phạm hoặc đưa ra quyết định xử phạt.
 
-Lưu ý: Mục tiêu 50% là target đề xuất, chưa phải kết quả thử nghiệm. Quy trình tương lai cũng là thiết kế đề xuất, cần kiểm chứng tính khả thi với dữ liệu thực tế.
+Lưu ý: Mức giảm 50% là target đề xuất cho pilot, chưa phải kết quả đã được kiểm chứng. Tính khả thi cần được đánh giá bằng dữ liệu thực tế.
 
 
 ---
@@ -293,9 +285,9 @@ Lưu ý: Mục tiêu 50% là target đề xuất, chưa phải kết quả thử
 |---|---|---|---|---|
 | CP1 Scan | Hỗ trợ mở rộng góc nhìn và hệ thống hóa các vấn đề theo Job Story. | Gợi ý các tình huống có thể phát sinh từ học tập, công việc và đời sống. | Một số gợi ý dễ chung chung, thiên về giải pháp hoặc chưa có dấu hiệu vấn đề thực tế. | Chỉ giữ các vấn đề có actor và bối cảnh cụ thể; không xem ý tưởng do AI đề xuất là bằng chứng. |
 | CP2 Problem Card | Hỗ trợ rà soát Job Story, actor, bottleneck và metric. | Giúp phát hiện các điểm còn thiếu trong mô tả bài toán. | Có thể đề xuất metric hoặc thời gian tiết kiệm khi chưa có dữ liệu baseline. | Không sử dụng các con số giả định như kết quả thực tế; phân biệt rõ target với baseline cần đo. |
-| CP5 Quy trình | Hỗ trợ hệ thống hóa quy trình hiện tại và quy trình tương lai. | Giúp phân tách các công đoạn, xác định điểm cần Rule, AI và con người tham gia. | Có thể gộp các bước khác nhau thành một bước, khiến bottleneck và trách nhiệm của từng actor không rõ. | Giữ riêng các bước tìm kiếm camera, tracking, đối chiếu dữ liệu và xác nhận của BQL. |
-| CP5-6 Problem Statement | Hỗ trợ rà soát tính rõ ràng của problem, impact, metric và boundary. | Giúp nhận diện sự khác biệt giữa mục tiêu của bài toán và giải pháp công nghệ. | Dễ đưa giải pháp vào Problem Statement hoặc đề xuất phạm vi quá rộng. | Tập trung vào mục tiêu giảm thời gian truy vết, đồng thời giữ giới hạn AI không tự kết luận vi phạm. |
-| CP6 Mức can thiệp / quyết định | Hỗ trợ phân tích sự khác biệt giữa No AI, Rule, Workflow và Agent. | Giúp so sánh mức độ phức tạp, khả năng kiểm soát và sự cần thiết của từng mức. | Agent có thể được đề xuất quá sớm dù quy trình đã có các bước xác định trước. | Lựa chọn AI Workflow vì bài toán đã có quy trình tương đối rõ; chỉ sử dụng AI tại những bước cần khả năng nhận diện, phân tích và tổng hợp. |
+| CP5 Quy trình | Hỗ trợ hệ thống hóa quy trình hiện tại và quy trình tương lai. | Giúp phân tách các bước tiếp nhận thông tin, xử lý video, phát hiện sự cố, gửi cảnh báo và xác minh của con người. | Có thể đề xuất quy trình quá rộng, đưa thêm tracking và xác định căn hộ dù không nằm trong phạm vi giải pháp nhóm lựa chọn. | Giới hạn quy trình ở phát hiện sự kiện và cảnh báo; nhân viên BQL kiểm tra clip và quyết định hướng xử lý. |
+| CP5-6 Problem Statement | Hỗ trợ rà soát actor, bottleneck, impact và success metric. | Giúp làm rõ vấn đề nằm ở việc sự cố có thể bị phát hiện chậm hoặc bỏ sót khi không thể theo dõi liên tục nhiều camera. | Có thể nhầm lẫn giữa thời gian xác định căn hộ và thời gian phát hiện sự cố. | Chuyển metric chính sang detection latency; xác định mức giảm 50% là target pilot cần kiểm chứng. |
+| CP6 Mức can thiệp / quyết định | Hỗ trợ phân tích các mức No AI, Rule, Workflow và Agent. | Giúp so sánh mức độ phù hợp, khả năng kiểm soát và độ phức tạp của từng phương án. | Có thể đề xuất Agent hoặc tự động hóa quá mức so với quy trình thực tế. | Lựa chọn Workflow kết hợp Computer Vision và con người xác minh; Not Yet với triển khai rộng, Go có điều kiện cho pilot trên video được cấp phép. |
 
 
 ---
@@ -372,7 +364,8 @@ Nhìn lại bài tập, em thấy việc xây dựng một ý tưởng tốt kh�
 
 ### 6.7. Liên kết giữa vấn đề, quy trình, metric và mức độ can thiệp của AI
 
-Bài toán nhóm lựa chọn xuất phát từ khó khăn của ban quản lý khi phải tìm kiếm camera và xác định căn hộ liên quan đến sự cố thú cưng. Nhóm đề xuất AI hỗ trợ phát hiện sự kiện, tracking người và thú cưng, đối chiếu dữ liệu để đưa ra Top-3 căn hộ nghi vấn kèm bằng chứng. Metric chính là thời gian xác định căn hộ, với mục tiêu kỳ vọng giảm ít nhất 50% so với quy trình hiện tại. Em cho rằng AI Workflow là mức độ can thiệp phù hợp vì quy trình xử lý đã có các bước tương đối rõ ràng, không cần một AI Agent tự chủ hoàn toàn. AI đảm nhiệm những công đoạn hỗ trợ phân tích và truy vết, trong khi nhân viên ban quản lý vẫn kiểm tra bằng chứng và xác nhận kết quả. Như vậy, giải pháp hướng đến việc giảm thao tác thủ công nhưng vẫn đảm bảo con người kiểm soát quyết định cuối cùng.
+Bài toán nhóm chọn xuất phát từ việc BQL và nhân viên an ninh không thể theo dõi liên tục nhiều camera CCTV, nên các sự cố thú cưng tại khu vực chung (phóng uế, chó không đeo rọ mõm nơi bắt buộc, hành vi có nguy cơ gây thương tích) có thể bị phát hiện chậm hoặc bị bỏ sót. Quy trình hiện tại là tuần tra, quan sát hoặc chờ cư dân phản ánh, sau đó xem CCTV để xác minh và xử lý. Bottleneck giả định là khoảng thời gian từ lúc sự cố xảy ra đến khi BQL biết; nhóm chưa đo baseline nên đây là giả định cần kiểm chứng. Vì vậy metric chính là detection latency, với target pilot đề xuất giảm ít nhất 50%, cùng recall, precision theo từng loại sự kiện và số cảnh báo sai mỗi camera-ca. Boundary là AI chỉ gắn cờ dấu hiệu nghi vấn và gửi cảnh báo nội bộ; AI không theo dõi qua nhiều camera, không xác định chủ nuôi hay căn hộ, không tự kết luận vi phạm hay xử phạt, và nhân viên an ninh xem clip rồi quyết định. Em cho rằng Workflow kết hợp Computer Vision và con người xác minh là mức phù hợp, vì các bước đã cố định (video → Rule chọn vùng → AI phát hiện → cảnh báo → người xác minh), Rule đơn thuần không phân biệt được hành vi, còn Agent không cần thiết và khó kiểm soát. Quyết định của nhóm là Not Yet với triển khai rộng, và Go có điều kiện cho pilot trên video được cấp phép. Nếu sau 4 tuần recall dưới 70% hoặc precision dưới 50% thì quay về No AI/Rule. Đây là nhận định đề xuất, chưa có kết quả pilot.
+
 
 ---
 
