@@ -173,77 +173,68 @@ Trong phạm vi thông tin và hoạt động nhóm đã ghi nhận, tôi tham g
 
 ### CP5 — Phân tích quy trình trước và sau
 
+### CP5 — Phân tích quy trình trước và sau
+
 Quy trình hiện tại:
 
 ```text
-[1. BQL tiếp nhận phản ánh]
-             |
-             v
-[2. Xác định thời gian và vị trí]
-             |
-             v
-[3. Nhân viên tìm kiếm trên nhiều camera]
-             |
-             v
-[4. Theo dõi và truy vết người dắt chó]
-             |
-             v
-[5. Đối chiếu dữ liệu ra vào, thang máy,
-    hồ sơ đăng ký thú cưng]
-             |
-             v
-[6. Xác định căn hộ liên quan]
-             |
-             v
-[7. BQL thực hiện xử lý]
+[1. Sự kiện xảy ra tại khu vực công cộng]
+              |
+              v
+[2. Chờ nhân viên quan sát hoặc cư dân phản ánh]   <== BOTTLENECK (giả định)
+              |
+              v
+[3. An ninh tiếp nhận, xác định thời điểm và vị trí]
+              |
+              v
+[4. Xem CCTV hoặc đến hiện trường để xác minh]     <== bottleneck phụ có thể xảy ra
+              |
+              v
+[5. Nhân viên/BQL xử lý sự cố]
+              |
+              v
+[6. Ghi nhận và đóng phản ánh]
 ```
 
-Điểm nghẽn: Nhân viên phải tự tìm kiếm trên nhiều camera, theo dõi đối tượng và đối chiếu dữ liệu từ nhiều nguồn. Quá trình này mất công sức, phụ thuộc vào kinh nghiệm của nhân viên và khó mở rộng khi số lượng camera hoặc sự cố tăng lên.
+Điểm nghẽn giả định: khoảng thời gian từ khi sự cố xảy ra đến khi BQL hoặc an ninh biết để bắt đầu xử lý (bước 2). Nhân viên không thể liên tục quan sát nhiều camera, nên có sự cố bị phát hiện muộn hoặc bị bỏ sót. Bước 4 cũng có thể tốn thời gian nếu phải tự tìm và xem lại video. Cả hai chưa được đo baseline nên chỉ là giả định cần kiểm chứng.
 
 Quy trình tương lai đề xuất:
 
 ```text
-[1. BQL tiếp nhận phản ánh]
-             |
-             v
-[2. Xác định thời gian, vị trí]
-             |
-             v
-[3. Rule: Khoanh vùng camera và khoảng thời gian]
-             |
-             v
-[4. AI: Phát hiện hành vi bất thường
-    liên quan đến thú cưng]
-             |
-             v
-[5. AI: Theo dõi, truy vết cặp người - chó
-    qua các camera liên quan]
-             |
-             v
-[6. Rule + AI: Đối chiếu dữ liệu ra vào,
-    thang máy và hồ sơ thú cưng]
-             |
-             v
-[7. AI: Tổng hợp Top-3 căn hộ khả nghi
-    kèm clip và bằng chứng]
-             |
-             v
-[8. HUMAN: Nhân viên BQL kiểm tra,
-    xác nhận hoặc bác bỏ gợi ý]
-             |
-             v
-[9. BQL quyết định phương án xử lý]
+[1. CCTV ghi hình khu vực được phép giám sát]
+              |
+              v
+[2. RULE: chọn vùng, camera và khung giờ áp dụng]
+              |
+              v
+[3. AI: nhận diện dấu hiệu sự kiện nghi vấn
+    (phóng uế / chó không rọ mõm nơi bắt buộc /
+     hành vi tấn công, va chạm nguy hiểm)]
+              |
+              v
+[4. RULE: chống trùng, gửi cảnh báo nội bộ kèm clip]
+              |
+              v
+[5. HUMAN: an ninh xem video, xác minh]
+              |
+        Xác nhận sự cố?
+        /            \
+      Có             Không
+       |               |
+       v               v
+[6a. An ninh/BQL    [6b. Bác bỏ
+     xử lý theo          cảnh báo sai]
+     quy định]
+       \               /
+        v             v
+[7. Ghi kết quả, lý do bác bỏ, sự kiện bỏ sót
+    để đánh giá mô hình]
 ```
 
-Mục tiêu thay đổi:
+Boundary: AI chỉ phát hiện dấu hiệu nghi vấn và gửi cảnh báo nội bộ. AI không theo dõi qua nhiều camera, không xác định chủ nuôi hay căn hộ, không tự kết luận có thương tích hoặc vi phạm, không tự xử phạt hay liên hệ cư dân.
 
-- Rút ngắn thời gian từ khi sự cố xảy ra đến khi BQL nhận được cảnh báo.
-- Đề xuất giảm ít nhất 50% detection latency trong giai đoạn pilot.
-- Theo dõi thêm recall, precision theo từng loại sự kiện và số cảnh báo sai trên mỗi camera-ca.
-- Cung cấp clip hoặc bằng chứng để nhân viên kiểm tra và xác minh.
-- Không để AI tự xác định chủ nuôi, căn hộ vi phạm hoặc đưa ra quyết định xử phạt.
+Phương án quay về: khi camera mất tín hiệu, AI không chắc chắn, cảnh báo sai quá nhiều hoặc có sự cố bị bỏ sót, nhân viên tiếp tục tuần tra, nhận phản ánh của cư dân và kiểm tra CCTV thủ công. AI không thay thế giám sát an ninh thông thường.
 
-Lưu ý: Mức giảm 50% là target đề xuất cho pilot, chưa phải kết quả đã được kiểm chứng. Tính khả thi cần được đánh giá bằng dữ liệu thực tế.
 
 
 ---
@@ -277,23 +268,19 @@ Em cũng nhận ra việc xây dựng Job Story và Problem Card không chỉ l�
 
 Khi tiếp cận ý tưởng camera AI cho khu dân cư, em khá nhanh chóng nghĩ đến các công nghệ như nhận diện đối tượng, phát hiện hành vi và tracking. Đây đều là những hướng kỹ thuật có thể triển khai, nhưng em nhận ra nếu chỉ tập trung vào chúng thì nhóm có thể đang giải quyết một phần của bài toán thay vì vấn đề thực sự của người dùng.
 
-Qua quá trình phân tích CP5, em hiểu rõ hơn quy trình xử lý sự cố của ban quản lý: tiếp nhận phản ánh, xác định thời gian và vị trí, tìm kiếm video từ nhiều camera, truy vết người đi cùng thú cưng rồi đối chiếu với dữ liệu ra vào, thang máy và danh sách đăng ký thú cưng.
+Ngay trong Problem Card ban đầu, em đã đưa vào cả việc truy vết người dắt chó qua nhiều camera và xác định căn hộ liên quan. Khi phân tích quy trình ở CP5, em nhận ra đó là một giải pháp đưa ra quá sớm: nhóm chưa kiểm chứng được BQL có thực sự cần truy vết hay không, trong khi việc quy kết căn hộ chỉ dựa vào hình ảnh camera có thể dẫn đến kết luận sai và gây rủi ro về quyền riêng tư.
 
-Như vậy, việc nhận diện được một con chó trong video chưa đủ để giúp ban quản lý xử lý sự cố. Khó khăn đáng chú ý hơn nằm ở quá trình tìm kiếm, liên kết thông tin và xác định căn hộ có liên quan.
-
-Từ đó, em nhận ra nhóm cần bắt đầu bằng câu hỏi: công đoạn nào đang khiến người dùng mất nhiều thời gian nhất và AI có thể hỗ trợ cụ thể ở đâu? Thay vì cố gắng đưa thật nhiều công nghệ vào giải pháp, em muốn tập trung vào những thành phần thực sự giúp giảm thao tác thủ công và cải thiện kết quả xử lý.
+Từ đó, em nhận ra nhóm cần bắt đầu bằng câu hỏi: công đoạn nào trong quy trình hiện tại đang khiến BQL xử lý chậm nhất và AI có thể hỗ trợ cụ thể ở đâu? Qua phân tích, bottleneck giả định nằm ở việc sự cố có thể không được ai biết ngay vì nhân viên không thể theo dõi liên tục nhiều camera. Vì vậy, nhóm thu hẹp phạm vi vào việc phát hiện dấu hiệu sự cố và gửi cảnh báo để nhân viên xác minh, thay vì cố đưa thật nhiều công nghệ vào giải pháp.
 
 ### 6.3. Một giả định hoặc nhận định của em đã thay đổi như thế nào?
 
-Một nhận định của em thay đổi rõ nhất là việc nhận diện đối tượng trong video không đồng nghĩa với việc giải quyết được sự cố.
+Có hai nhận định của em thay đổi rõ nhất.
 
-Ban đầu, em cho rằng nhận diện chó, mèo và theo dõi chuyển động là những năng lực quan trọng nhất của hệ thống. Tuy nhiên, khi nghiên cứu Frigate NVR, AXIS Object Analytics và NVIDIA DeepStream, em nhận ra nhiều năng lực nền tảng như phát hiện đối tượng, tracking và phân tích video đã có các giải pháp hỗ trợ.
+Thứ nhất, ban đầu em cho rằng nhận diện chó, mèo và theo dõi chuyển động là những năng lực quan trọng nhất của hệ thống. Tuy nhiên, khi nghiên cứu Frigate NVR, AXIS Object Analytics và NVIDIA DeepStream, em nhận ra nhiều năng lực nền tảng như phát hiện đối tượng, tracking và phân tích video đã có các giải pháp hỗ trợ. Điều em quan tâm hơn là khoảng cách giữa những năng lực đó và nhu cầu thực tế của ban quản lý: phát hiện được chó hoặc mèo không có nghĩa là hệ thống nhận biết chính xác hành vi phóng uế hay tấn công.
 
-Điều em quan tâm hơn sau quá trình nghiên cứu là khoảng cách giữa những năng lực kỹ thuật đó và nhu cầu thực tế của ban quản lý. Phát hiện được chó hoặc mèo không có nghĩa là hệ thống nhận biết chính xác được hành vi đi vệ sinh hay tấn công. Tương tự, tracking được một người và thú cưng cũng chưa đồng nghĩa với việc xác định được căn hộ liên quan.
+Thứ hai, em từng nghĩ giá trị lớn nhất của giải pháp là truy vết và xác định căn hộ liên quan, và đã đề xuất mục tiêu giảm 50% thời gian xác định căn hộ. Sau khi nhóm phản biện ở CP5, em thấy cách nghĩ này có vấn đề: nó giả định BQL đã biết sự cố, trong khi bottleneck có thể nằm ở việc sự cố không được phát hiện kịp thời, và việc quy kết căn hộ từ hình ảnh có thể gây nhầm lẫn. Vì vậy em đổi cách tiếp cận: metric chính chuyển sang detection latency (thời gian từ khi sự cố xảy ra đến khi BQL biết), còn truy vết căn hộ bị loại khỏi phạm vi.
 
-Vì vậy, em thay đổi cách tiếp cận: thay vì tập trung xây dựng lại những chức năng đã có, nhóm nên tận dụng công nghệ hiện tại và tập trung giải quyết phần còn thiếu trong quy trình, đặc biệt là truy vết, đối chiếu dữ liệu và tổng hợp bằng chứng.
-
-Em nghĩ đây là thay đổi quan trọng vì nó giúp em nhìn nhận một ý tưởng AI thực tế hơn. Giá trị không nhất thiết nằm ở việc tạo ra một mô hình hoàn toàn mới, mà còn nằm ở việc kết hợp đúng các công nghệ để giải quyết một vấn đề cụ thể.
+Em nghĩ đây là thay đổi quan trọng vì nó giúp em nhìn nhận một ý tưởng AI thực tế hơn. Giá trị không nhất thiết nằm ở việc làm nhiều chức năng, mà nằm ở việc chọn đúng bước trong quy trình để AI hỗ trợ và giữ con người ở vị trí xác minh.
 
 ### 6.4. Điều gì khiến em bất ngờ khi nghiên cứu các giải pháp hiện có?
 
@@ -303,7 +290,7 @@ Qua nghiên cứu, em tìm hiểu được Frigate NVR với khả năng phát h
 
 Trước đó, em thường có xu hướng nghĩ rằng để giải quyết một bài toán AI, nhóm cần tự phát triển phần lớn các thành phần kỹ thuật. Nhưng quá trình này giúp em nhận ra việc nghiên cứu giải pháp hiện có rất quan trọng, bởi nó giúp tránh lãng phí nguồn lực để xây dựng lại những chức năng đã được hỗ trợ.
 
-Tuy nhiên, em cũng nhận ra không nên đánh đồng việc công nghệ đã tồn tại với việc bài toán đã được giải quyết. Các công cụ có thể phát hiện và theo dõi đối tượng, nhưng việc nhận biết hành vi cụ thể và liên kết thông tin để xác định căn hộ liên quan vẫn là những thách thức riêng.
+Tuy nhiên, em cũng nhận ra không nên đánh đồng việc công nghệ đã tồn tại với việc bài toán đã được giải quyết. Các công cụ có thể phát hiện và theo dõi đối tượng, nhưng việc nhận biết hành vi cụ thể như phóng uế, không đeo rọ mõm hay tấn công vẫn là thách thức riêng, cần dữ liệu và kiểm thử cho từng loại sự kiện.
 
 Qua đó, em hiểu rằng trước khi phát triển một giải pháp, cần trả lời được ba câu hỏi: thị trường đã có gì, những giải pháp đó còn hạn chế ở đâu và nhóm có thể tạo thêm giá trị gì. Đây là cách tiếp cận giúp em đánh giá ý tưởng dựa trên nhu cầu thực tế thay vì chỉ dựa vào sự mới mẻ của công nghệ.
 
@@ -311,23 +298,21 @@ Qua đó, em hiểu rằng trước khi phát triển một giải pháp, cần 
 
 Phần khó nhất đối với em là chuyển một vấn đề khá rộng thành một điểm nghẽn cụ thể và một kết quả có thể đo lường.
 
-Với bài toán thú cưng tại khu dân cư, quy trình xử lý có nhiều công đoạn liên tiếp, từ tiếp nhận phản ánh, tìm kiếm camera, truy vết đối tượng đến đối chiếu dữ liệu và xác định căn hộ. Nếu chỉ đặt mục tiêu chung chung như tự động hóa giám sát hoặc nâng cao hiệu quả xử lý, em sẽ khó xác định được AI thực sự cần can thiệp vào đâu.
+Với bài toán thú cưng tại khu dân cư, ban đầu em đặt mục tiêu khá chung chung như hỗ trợ giám sát hoặc nâng cao hiệu quả xử lý sự cố, nên khó xác định AI thực sự cần can thiệp vào đâu. Khi phân tích CP5, nhóm mới xác định bottleneck giả định là khoảng thời gian từ khi sự cố xảy ra đến khi BQL biết để bắt đầu xử lý. Từ đó nhóm chọn detection latency làm metric chính, với target pilot đề xuất giảm ít nhất 50%, cùng recall, precision theo từng loại sự kiện và số cảnh báo sai mỗi camera-ca.
 
-Khi phân tích CP5, em nhận thấy việc tìm kiếm thủ công trên nhiều camera và đối chiếu thông tin từ nhiều nguồn là những công đoạn có thể tiêu tốn nhiều thời gian. Vì vậy, nhóm đề xuất sử dụng thời gian xác định căn hộ liên quan làm metric chính, với mục tiêu kỳ vọng giảm ít nhất 50%.
+Tuy nhiên, em hiểu rằng đây mới là mục tiêu đề xuất. Nhóm chưa đo được baseline và chưa có phỏng vấn BQL hay an ninh, nên bottleneck vẫn là giả định cần kiểm chứng.
 
-Tuy nhiên, em hiểu rằng đây mới là mục tiêu đề xuất, chưa phải kết quả đã được kiểm chứng bằng dữ liệu thực tế. Để đánh giá chính xác, nhóm vẫn cần có số liệu baseline và thử nghiệm trên quy trình thực tế.
-
-Một vấn đề khác em quan tâm là ranh giới giữa AI và con người. AI có thể hỗ trợ phát hiện, truy vết và đề xuất các căn hộ nghi vấn, nhưng không nên tự động kết luận cá nhân hoặc căn hộ vi phạm. Em cho rằng việc giữ vai trò xác minh cuối cùng cho nhân viên ban quản lý là cần thiết để hạn chế những quyết định sai lệch.
+Một vấn đề khác em quan tâm là ranh giới giữa AI và con người. AI có thể hỗ trợ phát hiện dấu hiệu nghi vấn và gửi cảnh báo, nhưng không nên tự kết luận có vi phạm hay xác định cá nhân, căn hộ. Em cho rằng việc giữ vai trò xác minh cuối cùng cho nhân viên an ninh là cần thiết để hạn chế báo nhầm và các quyết định sai lệch.
 
 ### 6.6. Nếu thực hiện lại bài tập, em sẽ thay đổi điều gì?
 
 Nếu được thực hiện lại bài tập, em sẽ dành nhiều thời gian hơn để kiểm chứng vấn đề thực tế trước khi đi sâu vào nghiên cứu công nghệ.
 
-Cụ thể, em muốn có cơ hội trao đổi trực tiếp với nhân viên ban quản lý hoặc bộ phận an ninh tại khu dân cư để hiểu cách họ xử lý một sự cố cụ thể. Em sẽ tập trung tìm hiểu họ thường mất bao lâu để xác định căn hộ liên quan, phải kiểm tra bao nhiêu camera, cần đối chiếu những nguồn dữ liệu nào và công đoạn nào gây khó khăn nhất.
+Cụ thể, em muốn có cơ hội trao đổi trực tiếp với nhân viên ban quản lý hoặc bộ phận an ninh để hiểu cách họ phát hiện và xử lý một sự cố cụ thể. Em sẽ tập trung tìm hiểu sự cố thường được biết đến bằng cách nào (tuần tra, camera hay phản ánh cư dân), thường mất bao lâu từ lúc xảy ra đến lúc BQL biết, họ phải theo dõi bao nhiêu camera và bước nào gây khó khăn nhất. Hiện nhóm mới có khảo sát nhỏ và chưa có phỏng vấn BQL, nên bottleneck vẫn chỉ là giả định.
 
-Bên cạnh đó, em sẽ chủ động tìm kiếm số liệu baseline để đánh giá tính khả thi của metric giảm 50% thời gian xác định căn hộ. Em cũng muốn kiểm tra sớm khả năng truy cập và liên kết các nguồn dữ liệu như camera, dữ liệu ra vào, thang máy và danh sách đăng ký thú cưng. Đây là những yếu tố có thể ảnh hưởng trực tiếp đến khả năng triển khai giải pháp.
+Bên cạnh đó, em sẽ chủ động tìm số liệu baseline để đánh giá tính khả thi của mục tiêu giảm 50% detection latency. Em cũng muốn kiểm tra sớm chất lượng camera, góc khuất, và quyền sử dụng video CCTV, vì đây là những yếu tố ảnh hưởng trực tiếp đến việc triển khai.
 
-Cuối cùng, em sẽ chú ý hơn đến các tình huống ngoại lệ như nhiều người và thú cưng xuất hiện cùng lúc, camera có góc khuất hoặc hệ thống tracking nhầm đối tượng. Những trường hợp này có thể ảnh hưởng đến độ tin cậy của kết quả nếu không được tính đến từ đầu.
+Cuối cùng, em sẽ chú ý hơn đến các tình huống dễ gây nhầm như chó chơi đùa giống hành vi tấn công, vật nhỏ như rọ mõm khó nhìn thấy, hoặc nhiều người và thú cưng xuất hiện cùng lúc. Những trường hợp này ảnh hưởng đến độ tin cậy của cảnh báo nếu không được tính đến từ đầu.
 
 Nhìn lại bài tập, em thấy việc xây dựng một ý tưởng tốt không chỉ cần tư duy công nghệ mà còn cần sự thận trọng khi kiểm chứng giả định. Nếu làm lại, em muốn dành nhiều thời gian hơn để hiểu người dùng và thu thập bằng chứng trước khi quyết định giải pháp.
 
